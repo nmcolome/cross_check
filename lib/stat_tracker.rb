@@ -1,18 +1,21 @@
 require 'CSV'
+require './lib/game.rb'
+require './lib/team.rb'
+# require 'pry'
 
 class StatTracker
-  attr_reader :content
+  attr_reader :game, :team
 
-  def initialize
-    @content = {}
+  def initialize(game, team)
+    @game = game
+    @team = team
   end
 
-  def from_csv(files)
-    files.each do |title, file|
-      @content[title] = []
-      CSV.foreach(file, headers: true, header_converters: :symbol) do |row|
-        @content[title] << row
-      end
-    end
+  def self.from_csv(files)
+    game = Game.new
+    game.to_data(files[:games])
+    team = Team.new
+    team.to_data(files[:teams])
+    stat_tracker = StatTracker.new(game, team)
   end
 end
