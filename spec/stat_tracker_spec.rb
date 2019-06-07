@@ -38,4 +38,12 @@ RSpec.describe StatTracker do
   it '#biggest_blowout' do
     expect(@stat_tracker.biggest_blowout).to eq 3
   end
+
+  it '#percentage_home_wins' do
+    expect(@game.percentage_home_wins).to eq 0.75
+  end
+
+  it '#percentage_visitor_wins' do
+    expect(@game.percentage_home_wins).to eq 0.25
+  end
 end
