@@ -1,4 +1,4 @@
-require './test/test_helper.rb'
+require './spec/test_helper.rb'
 require './lib/team.rb'
 
 RSpec.describe Team do
