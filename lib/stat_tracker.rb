@@ -29,4 +29,8 @@ class StatTracker
   def lowest_total_score
     @game.lowest_total_score
   end
+
+  def biggest_blowout
+    @game.biggest_blowout
+  end
 end

@@ -24,4 +24,9 @@ class Game
   def lowest_total_score
     scores_sum.min
   end
+
+  def biggest_blowout
+    diff = @content.map { |row| (row[:home_goals].to_i - row[:away_goals].to_i).abs }
+    diff.max
+  end
 end
