@@ -1,4 +1,5 @@
-require_relative './test_helper.rb'
+require './test/test_helper.rb'
+require './lib/stat_tracker.rb'
 
 RSpec.describe StatTracker do
   it 'exists' do
