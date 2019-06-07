@@ -41,4 +41,8 @@ class StatTracker
   def percentage_visitor_wins
     @game.percentage_visitor_wins
   end
+
+  def count_of_games_by_season
+    @game.count_of_games_by_season
+  end
 end

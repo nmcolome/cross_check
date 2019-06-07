@@ -39,4 +39,11 @@ class Game
     away = @content.count { |row| row[:outcome].split(' ')[0] == "away" }
     away.to_f / @content.count
   end
+
+  def count_of_games_by_season
+    groups = @content.group_by {|row| row[:season]}
+    result = {}
+    groups.each {|key, value| result[key] = value.count }
+    result
+  end
 end
