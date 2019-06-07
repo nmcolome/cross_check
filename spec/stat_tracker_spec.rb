@@ -4,9 +4,9 @@ require 'pry'
 
 RSpec.describe StatTracker do
   before(:all) do
-    game_path = './data/game.csv'
-    team_path = './data/team_info.csv'
-    game_teams_path = './data/game_teams_stats.csv'
+    game_path = './data/game_fixture.csv'
+    team_path = './data/team_fixture.csv'
+    game_teams_path = './data/game_teams_fixture.csv'
 
     locations = {
       games: game_path,
@@ -21,9 +21,17 @@ RSpec.describe StatTracker do
     expect(@stat_tracker).to be_an_instance_of StatTracker
   end
 
-  it '#from_csv' do
-    expect(@stat_tracker.game.content.count).to eq 7441
-    expect(@stat_tracker.team.content.count).to eq 33
-    expect(@stat_tracker.game_team.content.count).to eq 14882
+  it '::from_csv' do
+    expect(@stat_tracker.game.content.count).to eq 4
+    expect(@stat_tracker.team.content.count).to eq 5
+    expect(@stat_tracker.game_team.content.count).to eq 7
+  end
+
+  it '#highest_total_score' do
+    expect(@stat_tracker.highest_total_score).to eq 7
+  end
+
+  it '#lowest_total_score' do
+    expect(@stat_tracker.lowest_total_score).to eq 3
   end
 end

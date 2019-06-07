@@ -1,5 +1,6 @@
 require './spec/test_helper.rb'
 require './lib/game.rb'
+require 'pry'
 
 RSpec.describe Game do
   before(:all) do
@@ -21,5 +22,13 @@ RSpec.describe Game do
     expect(@game.content).to be_an_instance_of Array
     expect(@game.content.count).to eq 4
     expect(@game.content[0][:game_id]).to eq '2012030221'
+  end
+
+  it '#highest_total_score' do
+    expect(@game.highest_total_score).to eq 7
+  end
+
+  it '#lowest_total_score' do
+    expect(@game.lowest_total_score).to eq 3
   end
 end

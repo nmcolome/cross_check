@@ -21,4 +21,12 @@ class StatTracker
     game_team.to_data(files[:game_teams])
     stat_tracker = StatTracker.new(game, team, game_team)
   end
+
+  def highest_total_score
+    @game.highest_total_score
+  end
+
+  def lowest_total_score
+    @game.lowest_total_score
+  end
 end
