@@ -34,4 +34,8 @@ RSpec.describe StatTracker do
   it '#lowest_total_score' do
     expect(@stat_tracker.lowest_total_score).to eq 3
   end
+
+  it '#biggest_blowout' do
+    expect(@stat_tracker.biggest_blowout).to eq 3
+  end
 end

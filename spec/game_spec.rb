@@ -31,4 +31,8 @@ RSpec.describe Game do
   it '#lowest_total_score' do
     expect(@game.lowest_total_score).to eq 3
   end
+
+  it '#biggest_blowout' do
+    expect(@game.biggest_blowout).to eq 3
+  end
 end
