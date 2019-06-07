@@ -46,4 +46,12 @@ RSpec.describe StatTracker do
   it '#percentage_visitor_wins' do
     expect(@stat_tracker.percentage_visitor_wins).to eq 0.25
   end
+
+  it '#count_of_games_by_season' do
+    result = {
+      "20122013": 4
+    }
+
+    expect(@stat_tracker.count_of_games_by_season).to eq result
+  end
 end

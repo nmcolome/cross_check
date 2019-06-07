@@ -43,4 +43,12 @@ RSpec.describe Game do
   it '#percentage_visitor_wins' do
     expect(@game.percentage_visitor_wins).to eq 0.25
   end
+
+  it '#count_of_games_by_season' do
+    result = {
+      "20122013": 4
+    }
+
+    expect(@game.count_of_games_by_season).to eq result
+  end
 end
