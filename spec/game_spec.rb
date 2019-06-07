@@ -41,6 +41,6 @@ RSpec.describe Game do
   end
 
   it '#percentage_visitor_wins' do
-    expect(@game.percentage_home_wins).to eq 0.25
+    expect(@game.percentage_visitor_wins).to eq 0.25
   end
 end

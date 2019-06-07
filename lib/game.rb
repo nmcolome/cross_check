@@ -29,4 +29,14 @@ class Game
     diff = @content.map { |row| (row[:home_goals].to_i - row[:away_goals].to_i).abs }
     diff.max
   end
+
+  def percentage_home_wins
+    home = @content.count { |row| row[:outcome].split(' ')[0] == "home" }
+    home.to_f / @content.count
+  end
+
+  def percentage_visitor_wins
+    away = @content.count { |row| row[:outcome].split(' ')[0] == "away" }
+    away.to_f / @content.count
+  end
 end
