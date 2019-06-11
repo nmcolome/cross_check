@@ -46,4 +46,21 @@ class Game
     groups.each {|key, value| result[key] = value.count }
     result
   end
+
+  def average_goals_per_game
+    average_goals(@content)
+  end
+
+  def average_goals_by_season
+    groups = @content.group_by {|row| row[:season]}
+    result = {}
+
+    groups.each {|key, value| result[key] = average_goals(value) }
+    result
+  end
+
+  def average_goals(rows)
+    goals = rows.map { |row| row[:away_goals].to_i + row[:home_goals].to_i }
+    (goals.inject(:+) / goals.count.to_f).round(2)
+  end
 end
