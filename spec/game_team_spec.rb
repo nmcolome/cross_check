@@ -1,5 +1,6 @@
 require './spec/spec_helper.rb'
 require './lib/game_team.rb'
+require 'pry'
 
 RSpec.describe GameTeam do
   before(:all) do
@@ -40,7 +41,11 @@ RSpec.describe GameTeam do
     expect(@game_team.total_goals_by_team).to eq result
   end
 
-  it '#best_defense' do
-    expect(@game_team.best_defense).to eq '3'
+  # it '#best_defense' do
+  #   expect(@game_team.best_defense).to eq '3'
+  # end
+
+  it '#highest_scoring_visitor' do
+    expect(@game_team.highest_scoring_visitor).to eq '3'
   end
 end

@@ -62,9 +62,9 @@ RSpec.describe StatTracker do
 
   it '#average_goals_by_season' do
     result = {
-      "20122013" => 5.0,
-      "20132014" => 6.0
-    }
+              "20122013" => 5.0,
+              "20132014" => 6.0
+             }
 
     expect(@stat_tracker.average_goals_by_season).to eq result
   end
@@ -81,7 +81,11 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.worst_offense).to eq 'Rangers'
   end
 
-  it '#best_defense' do
-    expect(@stat_tracker.best_defense).to eq 'Bruins'
+  # it '#best_defense' do
+  #   expect(@stat_tracker.best_defense).to eq 'Bruins'
+  # end
+
+  it '#highest_scoring_visitor' do
+    expect(@stat_tracker.highest_scoring_visitor).to eq 'Rangers'
   end
 end
