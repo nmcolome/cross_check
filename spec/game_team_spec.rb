@@ -22,4 +22,8 @@ RSpec.describe GameTeam do
     expect(@game_team.content.count).to eq 7
     expect(@game_team.content[0][:game_id]).to eq '2012030221'
   end
+
+  it '#best_offense' do
+    expect(@game_team.best_offense).to eq '6'
+  end
 end

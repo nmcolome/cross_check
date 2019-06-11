@@ -12,4 +12,13 @@ class Team
       @content << row
     end
   end
+
+  def count_of_teams
+    @content.count
+  end
+
+  def find_name(team_id)
+    result = @content.find { |row| row[:team_id] == team_id }
+    result[:teamname]
+  end
 end

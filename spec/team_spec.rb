@@ -22,4 +22,13 @@ RSpec.describe Team do
     expect(@team.content.count).to eq 5
     expect(@team.content[0][:team_id]).to eq '1'
   end
+
+  it '#count_of_teams' do
+    expect(@team.count_of_teams).to eq 5
+  end
+
+  it '#find_name' do
+    expect(@team.find_name('1')).to eq 'Devils'
+    expect(@team.find_name('14')).to eq 'Lightning'
+  end
 end

@@ -68,4 +68,12 @@ RSpec.describe StatTracker do
 
     expect(@stat_tracker.average_goals_by_season).to eq result
   end
+
+  it '#count_of_teams' do
+    expect(@stat_tracker.count_of_teams).to eq 5
+  end
+
+  it '#best_offense' do
+    expect(@stat_tracker.best_offense).to eq 'Bruins'
+  end
 end
