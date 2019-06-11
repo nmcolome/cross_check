@@ -26,4 +26,8 @@ RSpec.describe GameTeam do
   it '#best_offense' do
     expect(@game_team.best_offense).to eq '6'
   end
+
+  it '#worst_offense' do
+    expect(@game_team.worst_offense).to eq '3'
+  end
 end
