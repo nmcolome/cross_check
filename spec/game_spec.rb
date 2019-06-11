@@ -1,4 +1,4 @@
-require './spec/test_helper.rb'
+require './spec/spec_helper.rb'
 require './lib/game.rb'
 require 'pry'
 
@@ -37,11 +37,11 @@ RSpec.describe Game do
   end
 
   it '#percentage_home_wins' do
-    expect(@game.percentage_home_wins).to eq 0.75
+    expect(@game.percentage_home_wins).to eq 0.78
   end
 
   it '#percentage_visitor_wins' do
-    expect(@game.percentage_visitor_wins).to eq 0.25
+    expect(@game.percentage_visitor_wins).to eq 0.22
   end
 
   it '#count_of_games_by_season' do
