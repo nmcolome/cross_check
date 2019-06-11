@@ -23,7 +23,7 @@ RSpec.describe StatTracker do
 
   it '::from_csv' do
     expect(@stat_tracker.game.content.count).to eq 9
-    expect(@stat_tracker.team.content.count).to eq 5
+    expect(@stat_tracker.team.content.count).to eq 6
     expect(@stat_tracker.game_team.content.count).to eq 7
   end
 
@@ -70,7 +70,7 @@ RSpec.describe StatTracker do
   end
 
   it '#count_of_teams' do
-    expect(@stat_tracker.count_of_teams).to eq 5
+    expect(@stat_tracker.count_of_teams).to eq 6
   end
 
   it '#best_offense' do

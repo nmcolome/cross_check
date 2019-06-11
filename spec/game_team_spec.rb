@@ -30,4 +30,13 @@ RSpec.describe GameTeam do
   it '#worst_offense' do
     expect(@game_team.worst_offense).to eq '3'
   end
+
+  it '#total_goals_by_team' do
+    result = {
+              "3"=>1.6666666666666667,
+              "6"=>3.25
+             }
+
+    expect(@game_team.total_goals_by_team).to eq result
+  end
 end
