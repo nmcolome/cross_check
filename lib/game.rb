@@ -32,12 +32,12 @@ class Game
 
   def percentage_home_wins
     home = @content.count { |row| row[:outcome].split(' ')[0] == "home" }
-    home.to_f / @content.count
+    (home.to_f / @content.count).round(2)
   end
 
   def percentage_visitor_wins
     away = @content.count { |row| row[:outcome].split(' ')[0] == "away" }
-    away.to_f / @content.count
+    (away.to_f / @content.count).round(2)
   end
 
   def count_of_games_by_season

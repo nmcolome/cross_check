@@ -22,13 +22,13 @@ RSpec.describe StatTracker do
   end
 
   it '::from_csv' do
-    expect(@stat_tracker.game.content.count).to eq 4
+    expect(@stat_tracker.game.content.count).to eq 9
     expect(@stat_tracker.team.content.count).to eq 5
     expect(@stat_tracker.game_team.content.count).to eq 7
   end
 
   it '#highest_total_score' do
-    expect(@stat_tracker.highest_total_score).to eq 7
+    expect(@stat_tracker.highest_total_score).to eq 9
   end
 
   it '#lowest_total_score' do
@@ -36,7 +36,7 @@ RSpec.describe StatTracker do
   end
 
   it '#biggest_blowout' do
-    expect(@stat_tracker.biggest_blowout).to eq 3
+    expect(@stat_tracker.biggest_blowout).to eq 5
   end
 
   it '#percentage_home_wins' do
@@ -49,7 +49,8 @@ RSpec.describe StatTracker do
 
   it '#count_of_games_by_season' do
     result = {
-      "20122013": 4
+      "20122013" => 6,
+      "20132014" => 3
     }
 
     expect(@stat_tracker.count_of_games_by_season).to eq result

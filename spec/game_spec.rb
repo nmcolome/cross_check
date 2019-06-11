@@ -20,12 +20,12 @@ RSpec.describe Game do
   it '#to_data adds content based on csv' do
     @game.to_data(@game_fixture)
     expect(@game.content).to be_an_instance_of Array
-    expect(@game.content.count).to eq 4
+    expect(@game.content.count).to eq 9
     expect(@game.content[0][:game_id]).to eq '2012030221'
   end
 
   it '#highest_total_score' do
-    expect(@game.highest_total_score).to eq 7
+    expect(@game.highest_total_score).to eq 9
   end
 
   it '#lowest_total_score' do
@@ -33,7 +33,7 @@ RSpec.describe Game do
   end
 
   it '#biggest_blowout' do
-    expect(@game.biggest_blowout).to eq 3
+    expect(@game.biggest_blowout).to eq 5
   end
 
   it '#percentage_home_wins' do
@@ -46,7 +46,8 @@ RSpec.describe Game do
 
   it '#count_of_games_by_season' do
     result = {
-      "20122013": 4
+      "20122013" => 6,
+      "20132014" => 3
     }
 
     expect(@game.count_of_games_by_season).to eq result
