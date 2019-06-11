@@ -39,4 +39,8 @@ RSpec.describe GameTeam do
 
     expect(@game_team.total_goals_by_team).to eq result
   end
+
+  it '#best_defense' do
+    expect(@game_team.best_defense).to eq '3'
+  end
 end

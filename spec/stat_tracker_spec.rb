@@ -80,4 +80,8 @@ RSpec.describe StatTracker do
   it '#worst_offense' do
     expect(@stat_tracker.worst_offense).to eq 'Rangers'
   end
+
+  it '#best_defense' do
+    expect(@stat_tracker.best_defense).to eq 'Bruins'
+  end
 end
