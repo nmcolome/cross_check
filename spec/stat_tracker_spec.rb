@@ -88,4 +88,8 @@ RSpec.describe StatTracker do
   it '#highest_scoring_visitor' do
     expect(@stat_tracker.highest_scoring_visitor).to eq 'Rangers'
   end
+
+  it '#highest_scoring_home_team' do
+    expect(@stat_tracker.highest_scoring_home_team).to eq 'Bruins'
+  end
 end

@@ -48,4 +48,8 @@ RSpec.describe GameTeam do
   it '#highest_scoring_visitor' do
     expect(@game_team.highest_scoring_visitor).to eq '3'
   end
+
+  it '#highest_scoring_home_team' do
+    expect(@game_team.highest_scoring_home_team).to eq '6'
+  end
 end
