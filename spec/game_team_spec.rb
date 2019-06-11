@@ -34,8 +34,8 @@ RSpec.describe GameTeam do
 
   it '#total_goals_by_team' do
     result = {
-              "3"=>1.6666666666666667,
-              "6"=>3.25
+              '3'=>1.6666666666666667,
+              '6'=>3.25
              }
 
     expect(@game_team.total_goals_by_team).to eq result
@@ -51,5 +51,27 @@ RSpec.describe GameTeam do
 
   it '#highest_scoring_home_team' do
     expect(@game_team.highest_scoring_home_team).to eq '6'
+  end
+
+  it '#hoa_goals' do
+    away_result = {'3'=>4, '6'=>5}
+    home_result = {'3'=>1, '6'=>8}
+
+    expect(@game_team.hoa_goals('away')).to eq away_result
+    expect(@game_team.hoa_goals('home')).to eq home_result
+  end
+
+  it '#games_count_by_team' do
+    result = {'3'=>3.0, '6'=>4.0}
+
+    expect(@game_team.games_count_by_team).to eq result
+  end
+
+  it '#average' do
+    away = {'3'=>4, '6'=>5}
+    home = {'3'=>1, '6'=>8}
+
+    expect(@game_team.average(away)).to eq '3'
+    expect(@game_team.average(home)).to eq '6'
   end
 end
