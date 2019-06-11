@@ -67,4 +67,9 @@ class StatTracker
     team_id = @game_team.worst_offense
     @team.find_name(team_id)
   end
+
+  def highest_scoring_visitor
+    team_id = @game_team.highest_scoring_visitor
+    @team.find_name(team_id)
+  end
 end
