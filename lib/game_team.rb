@@ -46,4 +46,21 @@ class GameTeam
     end
     goals_by_visitor.max_by { |key,value| value }[0]
   end
+
+  def highest_scoring_home_team
+    home = @content.group_by {|row| row[:hoa] == 'home' }[true]
+    goals_by_team = @content.group_by { |row| row[:team_id] }
+    goals_by_team.each do |key, value|
+      goals_by_team[key] = value.count.to_f
+    end
+    goals_by_visitor = home.group_by { |row| row[:team_id] }
+    goals_by_visitor.each do |key, value|
+      goals = value.map { |row| row[:goals].to_i }
+      goals_by_visitor[key] = goals.inject(&:+)
+    end
+    goals_by_visitor.each do |key, value|
+      goals_by_visitor[key] = value/goals_by_team[key]
+    end
+    goals_by_visitor.max_by { |key,value| value }[0]
+  end
 end
