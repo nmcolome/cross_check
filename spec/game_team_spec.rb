@@ -96,4 +96,39 @@ RSpec.describe GameTeam do
   it '#best_fans' do
     expect(@game_team.best_fans).to eq '6'
   end
+
+  it '#home_away_difference' do
+    result = {"6"=>{"home"=>0.5, "away"=>0.25, "dif"=>0.25}}
+
+    expect(@game_team.home_away_difference).to eq result
+  end
+
+  it '#group_by_hoa' do
+    teams = {"6"=>
+      [game_id:"2012030221", team_id:"6", hoa:"home", won:"TRUE", settled_in:"OT", head_coach:"Claude Julien", goals:"3"]}
+
+    result = {"6"=>{"home"=>1}}
+
+    expect(@game_team.group_by_hoa(teams)).to eq result
+  end
+
+  it '#value_count' do
+    teams = { "6" => {
+                      "home" => ['row', 'row'],
+                      "away"=> ['row']
+                      }
+            }
+
+    result = {"6"=>{"away"=>1, "home"=>2}}
+
+    expect(@game_team.value_count(teams)).to eq result
+  end
+
+  it '#percentage_wins' do
+    teams = {"6"=>{"away"=>1, "home"=>2}}
+    game_count = {"6"=>4.0}
+    result = {"6"=>{"away"=>0.25, "home"=>0.5}}
+
+    expect(@game_team.percentage_wins(teams, game_count)).to eq result
+  end
 end

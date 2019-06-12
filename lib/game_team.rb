@@ -80,33 +80,45 @@ class GameTeam
   end
 
   def win_count
-    wins = @content.group_by { |row| row[:won] }['TRUE']
-    win_count = wins.group_by { |row| row[:team_id] }
+    win_count = win_groups
     win_count.each { |key, value| win_count[key] = value.count }
   end
 
-  def best_fans
+  def win_groups
     wins = @content.group_by { |row| row[:won] }['TRUE']
-    teams = wins.group_by {|row| row[:team_id]}
+    wins.group_by { |row| row[:team_id] }
+  end
+
+  def best_fans
+    teams = home_away_difference
+    teams.max_by { |key,value| value['dif'] }[0]
+  end
+
+  def home_away_difference
+    teams = win_groups
+    group_by_hoa(teams)
+    game_count = games_count_by_team
+    percentage_wins(teams, game_count)
+
+    teams.each { |k,v| v['dif'] = (v['home'] - v['away']).abs }
+  end
+
+  def group_by_hoa(teams)
     teams.each do |key, value|
       teams[key] = value.group_by { |row| row[:hoa] }
     end
-    teams.each do |k, v|
-      v.each do |key, value|
-        v[key] = value.count
-      end
-    end
-    game_count = games_count_by_team
+    value_count(teams)
+  end
 
+  def value_count(teams)
     teams.each do |k, v|
-      v.each do |key, value|
-        v[key] = value/game_count[k]
-      end
+      v.each { |key, value| v[key] = value.count }
     end
+  end
 
-    teams.each do |k,v|
-      v['dif'] = (v['home'] - v['away']).abs
+  def percentage_wins(group, count)
+    group.each do |k, v|
+      v.each { |key, value| v[key] = value/count[k] }
     end
-    teams.max_by { |key,value| value['dif'] }[0]
   end
 end
