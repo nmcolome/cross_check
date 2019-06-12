@@ -32,12 +32,22 @@ class GameTeam
 
   def highest_scoring_visitor
     away = hoa_goals('away')
-    average(away)
+    average(away, 'max')
   end
 
   def highest_scoring_home_team
     home = hoa_goals('home')
-    average(home)
+    average(home, 'max')
+  end
+
+  def lowest_scoring_visitor
+    away = hoa_goals('away')
+    average(away, 'min')
+  end
+
+  def lowest_scoring_home_team
+    home = hoa_goals('home')
+    average(home, 'min')
   end
 
   def hoa_goals(status)
@@ -54,9 +64,13 @@ class GameTeam
     goals_by_team.each { |key, value| goals_by_team[key] = value.count.to_f }
   end
 
-  def average(status)
+  def average(type, status)
     game_count = games_count_by_team
-    status.each { |key, value| status[key] = value/game_count[key] }
-    status.max_by { |key,value| value }[0]
+    type.each { |key, value| type[key] = value/game_count[key] }
+    if status == 'max'
+      type.max_by { |key,value| value }[0]
+    else
+      type.min_by { |key,value| value }[0]
+    end
   end
 end

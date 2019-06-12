@@ -77,4 +77,14 @@ class StatTracker
     team_id = @game_team.highest_scoring_home_team
     @team.find_name(team_id)
   end
+
+  def lowest_scoring_visitor
+    team_id = @game_team.lowest_scoring_visitor
+    @team.find_name(team_id)
+  end
+
+  def lowest_scoring_home_team
+    team_id = @game_team.lowest_scoring_home_team
+    @team.find_name(team_id)
+  end
 end

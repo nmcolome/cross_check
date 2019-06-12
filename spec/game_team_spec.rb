@@ -71,8 +71,8 @@ RSpec.describe GameTeam do
     away = {'3'=>4, '6'=>5}
     home = {'3'=>1, '6'=>8}
 
-    expect(@game_team.average(away)).to eq '3'
-    expect(@game_team.average(home)).to eq '6'
+    expect(@game_team.average(away, 'max')).to eq '3'
+    expect(@game_team.average(home, 'max')).to eq '6'
   end
 
   it '#lowest_scoring_visitor' do
