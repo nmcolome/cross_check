@@ -92,4 +92,9 @@ class StatTracker
     team_id = @game_team.winningest_team
     @team.find_name(team_id)
   end
+
+  def best_fans
+    team_id = @game_team.best_fans
+    @team.find_name(team_id)
+  end
 end

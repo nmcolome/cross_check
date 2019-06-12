@@ -80,8 +80,33 @@ class GameTeam
   end
 
   def win_count
-    wins = @content.group_by {|row| row[:won] == 'TRUE' }[true]
+    wins = @content.group_by { |row| row[:won] }['TRUE']
     win_count = wins.group_by { |row| row[:team_id] }
     win_count.each { |key, value| win_count[key] = value.count }
   end
-end 
+
+  def best_fans
+    wins = @content.group_by { |row| row[:won] }['TRUE']
+    teams = wins.group_by {|row| row[:team_id]}
+    teams.each do |key, value|
+      teams[key] = value.group_by { |row| row[:hoa] }
+    end
+    teams.each do |k, v|
+      v.each do |key, value|
+        v[key] = value.count
+      end
+    end
+    game_count = games_count_by_team
+
+    teams.each do |k, v|
+      v.each do |key, value|
+        v[key] = value/game_count[k]
+      end
+    end
+
+    teams.each do |k,v|
+      v['dif'] = (v['home'] - v['away']).abs
+    end
+    teams.max_by { |key,value| value['dif'] }[0]
+  end
+end
