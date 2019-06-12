@@ -97,4 +97,9 @@ class StatTracker
     team_id = @game_team.best_fans
     @team.find_name(team_id)
   end
+
+  def worst_fans
+    team_ids = @game_team.worst_fans
+    team_ids.map { |id| @team.find_name(id) }
+  end
 end

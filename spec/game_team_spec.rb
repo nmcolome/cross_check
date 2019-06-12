@@ -98,7 +98,7 @@ RSpec.describe GameTeam do
   end
 
   it '#home_away_difference' do
-    result = {"6"=>{"home"=>0.5, "away"=>0.25, "dif"=>0.25}}
+    result = {"6"=>{"away"=>0.25, "home"=>0.5}}
 
     expect(@game_team.home_away_difference).to eq result
   end
@@ -130,5 +130,9 @@ RSpec.describe GameTeam do
     result = {"6"=>{"away"=>0.25, "home"=>0.5}}
 
     expect(@game_team.percentage_wins(teams, game_count)).to eq result
+  end
+
+  it '#worst_fans' do
+    expect(@game_team.worst_fans).to eq []
   end
 end

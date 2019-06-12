@@ -91,6 +91,7 @@ class GameTeam
 
   def best_fans
     teams = home_away_difference
+    teams.each { |k,v| v['dif'] = (v['home'] - v['away']).abs }
     teams.max_by { |key,value| value['dif'] }[0]
   end
 
@@ -99,8 +100,6 @@ class GameTeam
     group_by_hoa(teams)
     game_count = games_count_by_team
     percentage_wins(teams, game_count)
-
-    teams.each { |k,v| v['dif'] = (v['home'] - v['away']).abs }
   end
 
   def group_by_hoa(teams)
@@ -120,5 +119,12 @@ class GameTeam
     group.each do |k, v|
       v.each { |key, value| v[key] = value/count[k] }
     end
+  end
+
+  def worst_fans
+    teams = home_away_difference
+    teams.each { |k,v| v['dif'] = (v['away'] - v['home']) }
+    result = teams.find_all {|k,v| v['dif'] > 0 }
+    result.map {|e| e[0]}
   end
 end
