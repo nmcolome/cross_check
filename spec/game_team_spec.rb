@@ -84,6 +84,12 @@ RSpec.describe GameTeam do
   end
 
   it '#winningest_team' do
-    expect(@game_team.winningest_team).to eq 0.75
+    expect(@game_team.winningest_team).to eq '6'
+  end
+
+  it '#win_count' do
+    result = { "6" => 3 }
+
+    expect(@game_team.win_count).to eq result
   end
 end

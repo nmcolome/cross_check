@@ -87,4 +87,9 @@ class StatTracker
     team_id = @game_team.lowest_scoring_home_team
     @team.find_name(team_id)
   end
+
+  def winningest_team
+    team_id = @game_team.winningest_team
+    @team.find_name(team_id)
+  end
 end

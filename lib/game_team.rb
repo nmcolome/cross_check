@@ -73,4 +73,15 @@ class GameTeam
       type.min_by { |key,value| value }[0]
     end
   end
-end
+
+  def winningest_team
+    wins = win_count
+    average(wins, 'max')
+  end
+
+  def win_count
+    wins = @content.group_by {|row| row[:won] == 'TRUE' }[true]
+    win_count = wins.group_by { |row| row[:team_id] }
+    win_count.each { |key, value| win_count[key] = value.count }
+  end
+end 
