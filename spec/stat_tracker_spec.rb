@@ -100,4 +100,8 @@ RSpec.describe StatTracker do
   it '#lowest_scoring_home_team' do
     expect(@stat_tracker.lowest_scoring_home_team).to eq 'Rangers'
   end
+
+  it '#winningest_team' do
+    expect(@stat_tracker.winningest_team).to eq 'Bruins'
+  end
 end

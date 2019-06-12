@@ -82,4 +82,8 @@ RSpec.describe GameTeam do
   it '#lowest_scoring_home_team' do
     expect(@game_team.lowest_scoring_home_team).to eq '3'
   end
+
+  it '#winningest_team' do
+    expect(@game_team.winningest_team).to eq 0.75
+  end
 end
