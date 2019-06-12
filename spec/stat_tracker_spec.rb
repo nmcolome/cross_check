@@ -112,4 +112,12 @@ RSpec.describe StatTracker do
   it '#worst_fans' do
     expect(@stat_tracker.worst_fans).to eq []
   end
+
+  it '#best_defense' do
+    expect(@stat_tracker.best_defense).to eq 'Bruins'
+  end
+
+  it '#worst_defense' do
+    expect(@stat_tracker.worst_defense).to eq 'Rangers'
+  end
 end

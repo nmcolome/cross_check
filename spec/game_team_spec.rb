@@ -135,4 +135,12 @@ RSpec.describe GameTeam do
   it '#worst_fans' do
     expect(@game_team.worst_fans).to eq []
   end
+
+  it '#best_defense' do
+    expect(@game_team.best_defense).to eq '6'
+  end
+
+  it '#worst_defense' do
+    expect(@game_team.worst_defense).to eq '3'
+  end
 end
