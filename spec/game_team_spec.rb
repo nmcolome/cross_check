@@ -92,4 +92,8 @@ RSpec.describe GameTeam do
 
     expect(@game_team.win_count).to eq result
   end
+
+  it '#best_fans' do
+    expect(@game_team.best_fans).to eq '6'
+  end
 end
