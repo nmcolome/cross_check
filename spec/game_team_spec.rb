@@ -98,29 +98,29 @@ RSpec.describe GameTeam do
 
   it '#group_by_hoa' do
     teams = {"6"=>
-      [game_id:"2012030221", team_id:"6", hoa:"home", won:"TRUE", settled_in:"OT", head_coach:"Claude Julien", goals:"3"]}
+      [game_id:'2012030221', team_id:'6', hoa:'home', won:'TRUE', settled_in:'OT', head_coach:'Claude Julien', goals:'3']}
 
-    result = {"6"=>{"home"=>1}}
+    result = {'6'=>{'home'=>1}}
 
     expect(@game_team.group_by_hoa(teams)).to eq result
   end
 
   it '#value_count' do
     teams = { "6" => {
-                      "home" => ['row', 'row'],
-                      "away"=> ['row']
+                      'home' => ['row', 'row'],
+                      'away'=> ['row']
                       }
             }
 
-    result = {"6"=>{"away"=>1, "home"=>2}}
+    result = {'6'=>{'away'=>1, 'home'=>2}}
 
     expect(@game_team.value_count(teams)).to eq result
   end
 
   it '#percentage_wins' do
-    teams = {"6"=>{"away"=>1, "home"=>2}}
-    game_count = {"6"=>4.0}
-    result = {"6"=>{"away"=>0.25, "home"=>0.5}}
+    teams = {'6'=>{'away'=>1, 'home'=>2}}
+    game_count = {'6'=>4.0}
+    result = {'6'=>{'away'=>0.25, 'home'=>0.5}}
 
     expect(@game_team.percentage_wins(teams, game_count)).to eq result
   end
@@ -135,5 +135,28 @@ RSpec.describe GameTeam do
 
   it '#worst_defense' do
     expect(@game_team.worst_defense).to eq '3'
+  end
+
+  it '#goals_allowed' do
+    goals = {}
+    index_1 = { team_id:'6', hoa:'home', won:'TRUE', goals:'3' }
+    index_2 = { team_id:'3', hoa:'away', won:'FALSE', goals:'2' }
+
+    expect(@game_team.goals_allowed(goals, index_1, index_2)).to eq 2
+  end
+
+  it '#goals_switch' do
+    goals = {}
+    game = ['2012030221', 
+      [{game_id:'2012030221', team_id:'3', hoa:'away', won:'FALSE',goals:'2'}, {game_id:'2012030221', team_id:'6', hoa:'home', won:'TRUE', goals:'3'}]]
+    index = 0
+
+    expect(@game_team.goals_switch(game, index, goals)).to eq 2
+  end
+
+  it '#ga_calculation' do
+    result = {'6': 5, '3': 10}
+
+    expect(@game_team.ga_calculation).to eq result
   end
 end

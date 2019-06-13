@@ -129,22 +129,35 @@ class GameTeam
   end
 
   def best_defense
-    games = @content.group_by { |row| row[:game_id] }
-    goal = {}
-    games.each_with_index do |group, i|
-      if i % 2 != 0
-        x = group[1][0]
-        y = group[1][1]
+    goals = ga_calculation
+    average(goals, 'min')
+  end
+
+  def goals_allowed(collection, index_1, index_2)
+    if collection[index_1[:team_id]]
+      collection[index_1[:team_id]] += index_2[:goals].to_i
+    else
+      collection[index_1[:team_id]] = index_2[:goals].to_i
+    end
+  end
+
+  def goals_switch(game, index, collection)
+    game[1].each do |row|
+      if index % 2 != 0
+        index_1 = row[0]
+        index_2 = row[1]
       else
-        x = group[1][1]
-        y = group[1][0]
-      end
-      if goal[x[:team_id]]
-        goal[x[:team_id]] += y[:goals].to_i
-      else
-        goal[x[:team_id]] = y[:goals].to_i
+        index_1 = row[1]
+        index_2 = row[0]
       end
     end
-    average(goal, 'min')
+    goals_allowed(collection, index_1, index_2)
+  end
+
+  def ga_calculation
+    games = @content.group_by { |row| row[:game_id] }
+    goals = {}
+    games.each_with_index { |group, i| goals_switch(group, i, goals) }
+    goals
   end
 end
