@@ -127,4 +127,24 @@ class GameTeam
     result = teams.find_all {|k,v| v['dif'] > 0 }
     result.map {|e| e[0]}
   end
+
+  def best_defense
+    games = @content.group_by { |row| row[:game_id] }
+    goal = {}
+    games.each_with_index do |group, i|
+      if i % 2 != 0
+        x = group[1][0]
+        y = group[1][1]
+      else
+        x = group[1][1]
+        y = group[1][0]
+      end
+      if goal[x[:team_id]]
+        goal[x[:team_id]] += y[:goals].to_i
+      else
+        goal[x[:team_id]] = y[:goals].to_i
+      end
+    end
+    average(goal, 'min')
+  end
 end
