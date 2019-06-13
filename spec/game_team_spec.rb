@@ -147,15 +147,17 @@ RSpec.describe GameTeam do
 
   it '#goals_switch' do
     goals = {}
-    game = ['2012030221', 
+    game = ['2012030221',
       [{game_id:'2012030221', team_id:'3', hoa:'away', won:'FALSE',goals:'2'}, {game_id:'2012030221', team_id:'6', hoa:'home', won:'TRUE', goals:'3'}]]
     index = 0
+    result = {'6' => 2, '3' => 3}
 
-    expect(@game_team.goals_switch(game, index, goals)).to eq 2
+    expect(@game_team.goals_switch(game, index, goals)).to eq [0,1]
+    expect(goals).to eq result
   end
 
   it '#ga_calculation' do
-    result = {'6': 5, '3': 10}
+    result = {'6' => 5, '3' => 10}
 
     expect(@game_team.ga_calculation).to eq result
   end

@@ -133,25 +133,30 @@ class GameTeam
     average(goals, 'min')
   end
 
-  def goals_allowed(collection, index_1, index_2)
-    if collection[index_1[:team_id]]
-      collection[index_1[:team_id]] += index_2[:goals].to_i
+  def worst_defense
+    goals = ga_calculation
+    average(goals, 'max')
+  end
+
+  def goals_allowed(goals, index_1, index_2)
+    if goals[index_1[:team_id]]
+      goals[index_1[:team_id]] += index_2[:goals].to_i
     else
-      collection[index_1[:team_id]] = index_2[:goals].to_i
+      goals[index_1[:team_id]] = index_2[:goals].to_i
     end
   end
 
-  def goals_switch(game, index, collection)
-    game[1].each do |row|
+  def goals_switch(game, index, goals)
+    [0,1].each do |index|
       if index % 2 != 0
-        index_1 = row[0]
-        index_2 = row[1]
+        index_1 = game[1][0]
+        index_2 = game[1][1]
       else
-        index_1 = row[1]
-        index_2 = row[0]
+        index_1 = game[1][1]
+        index_2 = game[1][0]
       end
+      goals_allowed(goals, index_1, index_2)
     end
-    goals_allowed(collection, index_1, index_2)
   end
 
   def ga_calculation

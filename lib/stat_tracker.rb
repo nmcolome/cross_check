@@ -109,7 +109,7 @@ class StatTracker
   end
 
   def worst_defense
-    team_ids = @game_team.worst_defense
+    team_id = @game_team.worst_defense
     @team.find_name(team_id)
   end
 end
