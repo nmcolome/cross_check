@@ -24,7 +24,7 @@ RSpec.describe StatTracker do
   it '::from_csv' do
     expect(@stat_tracker.game.content.count).to eq 9
     expect(@stat_tracker.team.content.count).to eq 6
-    expect(@stat_tracker.game_team.content.count).to eq 7
+    expect(@stat_tracker.game_team.content.count).to eq 6
   end
 
   it '#highest_total_score' do

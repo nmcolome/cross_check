@@ -20,7 +20,7 @@ RSpec.describe GameTeam do
   it '#to_data adds content based on csv' do
     @game_team.to_data(@game_team_fixture)
     expect(@game_team.content).to be_an_instance_of Array
-    expect(@game_team.content.count).to eq 7
+    expect(@game_team.content.count).to eq 6
     expect(@game_team.content[0][:game_id]).to eq '2012030221'
   end
 
@@ -33,17 +33,10 @@ RSpec.describe GameTeam do
   end
 
   it '#total_goals_by_team' do
-    result = {
-              '3'=>1.6666666666666667,
-              '6'=>3.25
-             }
+    result = {'3'=>1.6666666666666667, '6'=>3.3333333333333335}
 
     expect(@game_team.total_goals_by_team).to eq result
   end
-
-  # it '#best_defense' do
-  #   expect(@game_team.best_defense).to eq '3'
-  # end
 
   it '#highest_scoring_visitor' do
     expect(@game_team.highest_scoring_visitor).to eq '3'
@@ -54,7 +47,7 @@ RSpec.describe GameTeam do
   end
 
   it '#hoa_goals' do
-    away_result = {'3'=>4, '6'=>5}
+    away_result = {'3'=>4, '6'=>2 }
     home_result = {'3'=>1, '6'=>8}
 
     expect(@game_team.hoa_goals('away')).to eq away_result
@@ -62,7 +55,7 @@ RSpec.describe GameTeam do
   end
 
   it '#games_count_by_team' do
-    result = {'3'=>3.0, '6'=>4.0}
+    result = {'3'=>3.0, '6'=>3.0}
 
     expect(@game_team.games_count_by_team).to eq result
   end
@@ -71,7 +64,7 @@ RSpec.describe GameTeam do
     away = {'3'=>4, '6'=>5}
     home = {'3'=>1, '6'=>8}
 
-    expect(@game_team.average(away, 'max')).to eq '3'
+    expect(@game_team.average(away, 'max')).to eq '6'
     expect(@game_team.average(home, 'max')).to eq '6'
   end
 
@@ -88,7 +81,7 @@ RSpec.describe GameTeam do
   end
 
   it '#win_count' do
-    result = { "6" => 3 }
+    result = { '6' => 3 }
 
     expect(@game_team.win_count).to eq result
   end
@@ -98,7 +91,7 @@ RSpec.describe GameTeam do
   end
 
   it '#home_away_difference' do
-    result = {"6"=>{"away"=>0.25, "home"=>0.5}}
+    result = {"6"=>{"away"=>0.3333333333333333, "home"=>0.6666666666666666}}
 
     expect(@game_team.home_away_difference).to eq result
   end
