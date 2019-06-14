@@ -23,8 +23,8 @@ RSpec.describe StatTracker do
 
   it '::from_csv' do
     expect(@stat_tracker.game.content.count).to eq 9
-    expect(@stat_tracker.team.content.count).to eq 5
-    expect(@stat_tracker.game_team.content.count).to eq 7
+    expect(@stat_tracker.team.content.count).to eq 6
+    expect(@stat_tracker.game_team.content.count).to eq 6
   end
 
   it '#highest_total_score' do
@@ -62,10 +62,62 @@ RSpec.describe StatTracker do
 
   it '#average_goals_by_season' do
     result = {
-      "20122013" => 5.0,
-      "20132014" => 6.0
-    }
+              "20122013" => 5.0,
+              "20132014" => 6.0
+             }
 
     expect(@stat_tracker.average_goals_by_season).to eq result
+  end
+
+  it '#count_of_teams' do
+    expect(@stat_tracker.count_of_teams).to eq 6
+  end
+
+  it '#best_offense' do
+    expect(@stat_tracker.best_offense).to eq 'Bruins'
+  end
+
+  it '#worst_offense' do
+    expect(@stat_tracker.worst_offense).to eq 'Rangers'
+  end
+
+  # it '#best_defense' do
+  #   expect(@stat_tracker.best_defense).to eq 'Bruins'
+  # end
+
+  it '#highest_scoring_visitor' do
+    expect(@stat_tracker.highest_scoring_visitor).to eq 'Rangers'
+  end
+
+  it '#highest_scoring_home_team' do
+    expect(@stat_tracker.highest_scoring_home_team).to eq 'Bruins'
+  end
+
+  it '#lowest_scoring_visitor' do
+    expect(@stat_tracker.lowest_scoring_visitor).to eq 'Bruins'
+  end
+
+  it '#lowest_scoring_home_team' do
+    expect(@stat_tracker.lowest_scoring_home_team).to eq 'Rangers'
+  end
+
+  it '#winningest_team' do
+    expect(@stat_tracker.winningest_team).to eq 'Bruins'
+  end
+
+  it '#best_fans' do
+    expect(@stat_tracker.best_fans).to eq 'Bruins'
+  end
+
+  it '#worst_fans' do
+    expect(@stat_tracker.worst_fans).to eq []
+  end
+
+  it '#best_defense' do
+    expect(@stat_tracker.best_defense).to eq 'Bruins'
+  end
+
+  it '#worst_defense' do
+    expect(@stat_tracker.worst_defense).to eq 'Rangers'
   end
 end

@@ -53,4 +53,63 @@ class StatTracker
   def average_goals_by_season
     @game.average_goals_by_season
   end
+
+  def count_of_teams
+    @team.count_of_teams
+  end
+
+  def best_offense
+    team_id = @game_team.best_offense
+    @team.find_name(team_id)
+  end
+
+  def worst_offense
+    team_id = @game_team.worst_offense
+    @team.find_name(team_id)
+  end
+
+  def highest_scoring_visitor
+    team_id = @game_team.highest_scoring_visitor
+    @team.find_name(team_id)
+  end
+
+  def highest_scoring_home_team
+    team_id = @game_team.highest_scoring_home_team
+    @team.find_name(team_id)
+  end
+
+  def lowest_scoring_visitor
+    team_id = @game_team.lowest_scoring_visitor
+    @team.find_name(team_id)
+  end
+
+  def lowest_scoring_home_team
+    team_id = @game_team.lowest_scoring_home_team
+    @team.find_name(team_id)
+  end
+
+  def winningest_team
+    team_id = @game_team.winningest_team
+    @team.find_name(team_id)
+  end
+
+  def best_fans
+    team_id = @game_team.best_fans
+    @team.find_name(team_id)
+  end
+
+  def worst_fans
+    team_ids = @game_team.worst_fans
+    team_ids.map { |id| @team.find_name(id) }
+  end
+
+  def best_defense
+    team_id = @game_team.best_defense
+    @team.find_name(team_id)
+  end
+
+  def worst_defense
+    team_id = @game_team.worst_defense
+    @team.find_name(team_id)
+  end
 end
