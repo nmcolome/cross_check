@@ -21,4 +21,16 @@ class Team
     result = @content.find { |row| row[:team_id] == team_id }
     result[:teamname]
   end
+
+  def team_info(team_id)
+    result = @content.find { |row| row[:team_id] == team_id }
+    {
+      'team_id' => result[:team_id],
+      'franchise_id' => result[:franchiseid],
+      'short_name' => result[:shortname],
+      'team_name' => result[:teamname],
+      'abbreviation' => result[:abbreviation],
+      'link' => result[:link]
+    }
+  end
 end

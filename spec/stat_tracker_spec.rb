@@ -120,4 +120,17 @@ RSpec.describe StatTracker do
   it '#worst_defense' do
     expect(@stat_tracker.worst_defense).to eq 'Rangers'
   end
+
+  it '#team_info' do
+    result = {
+      'team_id' => '1',
+      'franchise_id' => '23',
+      'short_name' => 'New Jersey',
+      'team_name' => 'Devils',
+      'abbreviation' => 'NJD',
+      'link' => '/api/v1/teams/1'
+    }
+
+    expect(@stat_tracker.team_info('1')).to eq result
+  end
 end

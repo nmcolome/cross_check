@@ -112,4 +112,8 @@ class StatTracker
     team_id = @game_team.worst_defense
     @team.find_name(team_id)
   end
+
+  def team_info(team_id)
+    @team.team_info(team_id)
+  end
 end
