@@ -46,8 +46,8 @@ RSpec.describe Game do
 
   it '#count_of_games_by_season' do
     result = {
-      "20122013" => 6,
-      "20132014" => 3
+      '20122013' => 6,
+      '20132014' => 3
     }
 
     expect(@game.count_of_games_by_season).to eq result
@@ -59,10 +59,14 @@ RSpec.describe Game do
 
   it '#average_goals_by_season' do
     result = {
-      "20122013" => 5.0,
-      "20132014" => 6.0
+      '20122013' => 5.0,
+      '20132014' => 6.0
     }
 
     expect(@game.average_goals_by_season).to eq result
+  end
+
+  it '#best_season' do
+    expect(@game.best_season('3')).to eq '20122013'
   end
 end

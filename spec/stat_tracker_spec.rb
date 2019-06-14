@@ -133,4 +133,8 @@ RSpec.describe StatTracker do
 
     expect(@stat_tracker.team_info('1')).to eq result
   end
+
+  it '#best_season' do
+    expect(@stat_tracker.best_season('3')).to eq '20122013'
+  end
 end
