@@ -138,4 +138,12 @@ RSpec.describe StatTracker do
   it '#average_win_percentage' do
     expect(@stat_tracker.average_win_percentage('6')).to eq 1.0
   end
+
+  it '#most_goals_scored' do
+    expect(@stat_tracker.most_goals_scored('6')).to eq 5
+  end
+
+  it '#fewest_goals_scored' do
+    expect(@stat_tracker.fewest_goals_scored('6')).to eq 2
+  end
 end

@@ -130,4 +130,12 @@ class StatTracker
   def average_win_percentage(team_id)
     @game_team.average_win_percentage(team_id)
   end
+
+  def most_goals_scored(team_id)
+    @game_team.most_goals_scored(team_id)
+  end
+
+  def fewest_goals_scored(team_id)
+    @game_team.fewest_goals_scored(team_id)
+  end
 end

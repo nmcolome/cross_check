@@ -167,4 +167,12 @@ RSpec.describe GameTeam do
   it '#average_win_percentage' do
     expect(@game_team.average_win_percentage('6')).to eq 1.0
   end
+
+  it '#most_goals_scored' do
+    expect(@game_team.most_goals_scored('6')).to eq 5
+  end
+
+  it '#fewest_goals_scored' do
+    expect(@game_team.fewest_goals_scored('6')).to eq 2
+  end
 end

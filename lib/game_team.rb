@@ -176,4 +176,16 @@ class GameTeam
     total = games.count.to_f
     (wins / total).round(2)
   end
+
+  def most_goals_scored(team_id)
+    games = game_per_team(team_id)
+    goals = games.map { |r| r[:goals].to_i }
+    goals.max
+  end
+
+  def fewest_goals_scored(team_id)
+    games = game_per_team(team_id)
+    goals = games.map { |r| r[:goals].to_i }
+    goals.min
+  end
 end
