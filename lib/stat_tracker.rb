@@ -126,4 +126,8 @@ class StatTracker
     games = @game_team.game_per_team(team_id)
     @game.worst_season(games)
   end
+
+  def average_win_percentage(team_id)
+    @game_team.average_win_percentage(team_id)
+  end
 end

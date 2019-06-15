@@ -169,4 +169,11 @@ class GameTeam
   def game_per_team(team_id)
     @content.find_all { |row| row[:team_id] == team_id }
   end
+
+  def average_win_percentage(team_id)
+    games = game_per_team(team_id)
+    wins = games.count { |row| row[:won] == 'TRUE' }
+    total = games.count.to_f
+    (wins / total).round(2  )
+  end
 end

@@ -163,4 +163,8 @@ RSpec.describe GameTeam do
     expect(@game_team.game_per_team('3')).to be_an_instance_of Array
     expect(@game_team.game_per_team('3').count).to eq 3
   end
+
+  it '#average_win_percentage' do
+    expect(@game_team.average_win_percentage('6')).to eq 1.0
+  end
 end
