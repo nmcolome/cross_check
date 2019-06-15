@@ -71,6 +71,13 @@ class Game
     seasons.key(win_percentage)
   end
 
+  def worst_season(games)
+    data = season_finder(games)
+    seasons = win_percentages(data)
+    win_percentage = seasons.values.min
+    seasons.key(win_percentage)
+  end
+
   def season_finder(games)
     data = games.map { |row| { game_id: row[:game_id], won: row[:won] } }
 

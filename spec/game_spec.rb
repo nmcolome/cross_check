@@ -76,6 +76,16 @@ RSpec.describe Game do
     expect(@game.best_season(input)).to eq '20122013'
   end
 
+  it '#worst_season' do
+    input = [
+      { game_id: '2012030221', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030222', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030223', team_id: '3', won: 'FALSE', goals: '1' }
+    ]
+
+    expect(@game.worst_season(input)).to eq '20122013'
+  end
+
   it '#season_finder' do
     input = [
       { game_id: '2012030221', team_id: '3', won: 'FALSE', goals: '2' },
