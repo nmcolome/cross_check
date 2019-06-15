@@ -161,4 +161,9 @@ RSpec.describe GameTeam do
 
     expect(@game_team.ga_calculation).to eq result
   end
+
+  it '#game_per_team' do
+    expect(@game_team.game_per_team('3')).to be_an_instance_of Array
+    expect(@game_team.game_per_team('3').count).to eq 3
+  end
 end
