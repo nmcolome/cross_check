@@ -149,10 +149,9 @@ RSpec.describe GameTeam do
     goals = {}
     game = ['2012030221',
       [{game_id:'2012030221', team_id:'3', hoa:'away', won:'FALSE',goals:'2'}, {game_id:'2012030221', team_id:'6', hoa:'home', won:'TRUE', goals:'3'}]]
-    index = 0
     result = {'6' => 2, '3' => 3}
 
-    expect(@game_team.goals_switch(game, index, goals)).to eq [0,1]
+    expect(@game_team.goals_switch(game, goals)).to eq [0,1]
     expect(goals).to eq result
   end
 

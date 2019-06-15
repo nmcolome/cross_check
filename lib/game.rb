@@ -31,19 +31,19 @@ class Game
   end
 
   def percentage_home_wins
-    home = @content.count { |row| row[:outcome].split(' ')[0] == "home" }
+    home = @content.count { |row| row[:outcome].split(' ')[0] == 'home' }
     (home.to_f / @content.count).round(2)
   end
 
   def percentage_visitor_wins
-    away = @content.count { |row| row[:outcome].split(' ')[0] == "away" }
+    away = @content.count { |row| row[:outcome].split(' ')[0] == 'away' }
     (away.to_f / @content.count).round(2)
   end
 
   def count_of_games_by_season
-    groups = @content.group_by {|row| row[:season]}
+    groups = @content.group_by { |row| row[:season] }
     result = {}
-    groups.each {|key, value| result[key] = value.count }
+    groups.each { |key, value| result[key] = value.count }
     result
   end
 
@@ -52,10 +52,10 @@ class Game
   end
 
   def average_goals_by_season
-    groups = @content.group_by {|row| row[:season]}
+    groups = @content.group_by { |row| row[:season] }
     result = {}
 
-    groups.each {|key, value| result[key] = average_goals(value) }
+    groups.each { |key, value| result[key] = average_goals(value) }
     result
   end
 
@@ -83,9 +83,9 @@ class Game
   def win_percentages(data)
     seasons = data.group_by { |h| h[:season] }
     seasons.each do |key, value|
-      wins = value.count { |r| r[:won] == "TRUE" }
+      wins = value.count { |r| r[:won] == 'TRUE' }
       total = value.count.to_f
-      seasons[key] = (wins/total)
+      seasons[key] = (wins / total)
     end
   end
 end
