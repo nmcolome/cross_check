@@ -174,6 +174,6 @@ class GameTeam
     games = game_per_team(team_id)
     wins = games.count { |row| row[:won] == 'TRUE' }
     total = games.count.to_f
-    (wins / total).round(2  )
+    (wins / total).round(2)
   end
 end
