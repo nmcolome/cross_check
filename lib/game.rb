@@ -65,21 +65,27 @@ class Game
   end
 
   def best_season(games)
-    goals = games.map { |row| { game_id: row[:game_id], won: row[:won] } }
+    data = season_finder(games)
+    seasons = win_percentages(data)
+    win_percentage = seasons.values.max
+    seasons.key(win_percentage)
+  end
 
-    goals.each do |pair|
+  def season_finder(games)
+    data = games.map { |row| { game_id: row[:game_id], won: row[:won] } }
+
+    data.each do |pair|
       season = @content.find { |row| row[:game_id] == pair[:game_id] }
       pair[:season] = season[:season]
     end
+  end
 
-    seasons = goals.group_by { |h| h[:season] }
-
+  def win_percentages(data)
+    seasons = data.group_by { |h| h[:season] }
     seasons.each do |key, value|
       wins = value.count { |r| r[:won] == "TRUE" }
       total = value.count.to_f
       seasons[key] = (wins/total)
     end
-    max_wins = seasons.values.max
-    seasons.key(max_wins)
   end
 end

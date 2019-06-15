@@ -71,4 +71,18 @@ RSpec.describe Game do
 
     expect(@game.best_season(input)).to eq '20122013'
   end
+
+  it '#season_finder' do
+    input = [{game_id:'2012030221', team_id:'3', hoa:'away', won:'FALSE', goals:'2'},{game_id:'2012030222', team_id:'3', hoa:'away', won:'FALSE', goals:'2'},{game_id:'2012030223', team_id:'3', hoa:'home', won:'FALSE', goals:'1'}]
+    result = [{:game_id=>"2012030221", :won=>"FALSE", :season=>"20122013"}, {:game_id=>"2012030222", :won=>"FALSE", :season=>"20122013"}, {:game_id=>"2012030223", :won=>"FALSE", :season=>"20122013"}]
+
+    expect(@game.season_finder(input)).to eq result
+  end
+
+  it '#win_percentages' do
+    input = [{:game_id=>"2012030221", :won=>"FALSE", :season=>"20122013"}, {:game_id=>"2012030222", :won=>"FALSE", :season=>"20122013"}, {:game_id=>"2012030223", :won=>"FALSE", :season=>"20122013"}]
+    result = {"20122013"=>0.0}
+
+    expect(@game.win_percentages(input)).to eq result
+  end
 end
