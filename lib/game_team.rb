@@ -165,4 +165,8 @@ class GameTeam
     games.each_with_index { |group, i| goals_switch(group, i, goals) }
     goals
   end
+
+  def game_per_team(team_id)
+    @content.find_all {|row| row[:team_id] == team_id }
+  end
 end

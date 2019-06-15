@@ -67,6 +67,8 @@ RSpec.describe Game do
   end
 
   it '#best_season' do
-    expect(@game.best_season('3')).to eq '20122013'
+    input = [{game_id:'2012030221', team_id:'3', hoa:'away', won:'FALSE', goals:'2'},{game_id:'2012030222', team_id:'3', hoa:'away', won:'FALSE', goals:'2'},{game_id:'2012030223', team_id:'3', hoa:'home', won:'FALSE', goals:'1'}]
+
+    expect(@game.best_season(input)).to eq '20122013'
   end
 end

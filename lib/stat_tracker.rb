@@ -116,4 +116,9 @@ class StatTracker
   def team_info(team_id)
     @team.team_info(team_id)
   end
+
+  def best_season(team_id)
+    games = @game_team.game_per_team(team_id)
+    @game.best_season(games)
+  end
 end

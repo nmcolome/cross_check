@@ -63,4 +63,23 @@ class Game
     goals = rows.map { |row| row[:away_goals].to_i + row[:home_goals].to_i }
     (goals.inject(:+) / goals.count.to_f).round(2)
   end
+
+  def best_season(games)
+    goals = games.map { |row| { game_id: row[:game_id], won: row[:won] } }
+
+    goals.each do |pair|
+      season = @content.find { |row| row[:game_id] == pair[:game_id] }
+      pair[:season] = season[:season]
+    end
+
+    seasons = goals.group_by { |h| h[:season] }
+
+    seasons.each do |key, value|
+      wins = value.count { |r| r[:won] == "TRUE" }
+      total = value.count.to_f
+      seasons[key] = (wins/total)
+    end
+    max_wins = seasons.values.max
+    seasons.key(max_wins)
+  end
 end
