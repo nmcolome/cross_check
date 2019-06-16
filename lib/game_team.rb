@@ -1,5 +1,5 @@
 require 'CSV'
-
+require 'pry'
 class GameTeam
   attr_reader :content
 
@@ -187,5 +187,32 @@ class GameTeam
     games = game_per_team(team_id)
     goals = games.map { |r| r[:goals].to_i }
     goals.min
+  end
+
+  def favorite_opponent(team_id)
+    teams = opponents_results(team_id)
+    fave_opp = teams.values.max
+    teams.key(fave_opp)
+  end
+
+  def rival(team_id)
+    teams = opponents_results(team_id)
+    rival = teams.values.min
+    teams.key(rival)
+  end
+
+  def team_opponents(team_id)
+    games = game_per_team(team_id)
+    game_ids = games.map {|row| row[:game_id]}
+    games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
+    games.flatten.find_all { |row| row[:team_id] != team_id }
+  end
+
+  def opponents_results(team_id)
+    opponents = team_opponents(team_id)
+    teams = opponents.group_by { |row| row[:team_id] }
+    teams.each do |k,v|
+      teams[k] = v.count {|row| row[:won] == 'FALSE'} / v.count.to_f
+    end
   end
 end

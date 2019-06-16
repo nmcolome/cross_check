@@ -2,6 +2,7 @@ require 'CSV'
 require_relative './game.rb'
 require_relative './team.rb'
 require_relative './game_team.rb'
+require 'pry'
 
 class StatTracker
   attr_reader :game, :team, :game_team
@@ -137,5 +138,15 @@ class StatTracker
 
   def fewest_goals_scored(team_id)
     @game_team.fewest_goals_scored(team_id)
+  end
+
+  def favorite_opponent(team_id)
+    id = @game_team.favorite_opponent(team_id)
+    @team.find_name(id)
+  end
+
+  def rival(team_id)
+    id = @game_team.rival(team_id)
+    @team.find_name(id)
   end
 end

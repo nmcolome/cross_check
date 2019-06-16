@@ -175,4 +175,12 @@ RSpec.describe GameTeam do
   it '#fewest_goals_scored' do
     expect(@game_team.fewest_goals_scored('6')).to eq 2
   end
+
+  it '#favorite_opponent' do
+    expect(@game_team.favorite_opponent('6')).to eq '3'
+  end
+
+  it '#rival' do
+    expect(@game_team.rival('6')).to eq '3'
+  end
 end
