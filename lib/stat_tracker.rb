@@ -149,4 +149,12 @@ class StatTracker
     id = @game_team.rival(team_id)
     @team.find_name(id)
   end
+
+  def biggest_team_blowout(team_id)
+    @game_team.biggest_team_blowout(team_id)
+  end
+
+  def worst_loss(team_id)
+    @game_team.worst_loss(team_id)
+  end
 end

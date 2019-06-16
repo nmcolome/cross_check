@@ -183,4 +183,12 @@ RSpec.describe GameTeam do
   it '#rival' do
     expect(@game_team.rival('6')).to eq '3'
   end
+
+  it '#biggest_team_blowout' do
+    expect(@game_team.biggest_team_blowout('6')).to eq 3
+  end
+
+  it '#worst_loss' do
+    expect(@game_team.worst_loss('3')).to eq 3
+  end
 end

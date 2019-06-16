@@ -154,4 +154,12 @@ RSpec.describe StatTracker do
   it '#rival' do
     expect(@stat_tracker.rival('6')).to eq 'Rangers'
   end
+
+  it '#biggest_team_blowout' do
+    expect(@stat_tracker.biggest_team_blowout('6')).to eq 3
+  end
+
+  it '#worst_loss' do
+    expect(@stat_tracker.worst_loss('3')).to eq 3
+  end
 end
