@@ -217,26 +217,21 @@ class GameTeam
   end
 
   def biggest_team_blowout(team_id)
-    games = @content.find_all do |row|
-      row[:team_id] == team_id && row[:won] == 'TRUE'
-    end
-    game_ids = games.map {|row| row[:game_id]}
-    games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
-    results = games.map do |pair|
-      (pair[0][:goals].to_i - pair[1][:goals].to_i).abs
-    end
-    results.max
+    goal_difference(team_id, 'TRUE').max
   end
 
   def worst_loss(team_id)
+    goal_difference(team_id, 'FALSE').max
+  end
+
+  def goal_difference(team_id, won)
     games = @content.find_all do |row|
-      row[:team_id] == team_id && row[:won] == 'FALSE'
+      row[:team_id] == team_id && row[:won] == won
     end
     game_ids = games.map {|row| row[:game_id]}
     games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
     results = games.map do |pair|
       (pair[0][:goals].to_i - pair[1][:goals].to_i).abs
     end
-    results.max
   end
 end
