@@ -162,4 +162,10 @@ RSpec.describe StatTracker do
   it '#worst_loss' do
     expect(@stat_tracker.worst_loss('3')).to eq 3
   end
+
+  it '#head_to_head' do
+    result = {'Rangers' => 1.0 }
+
+    expect(@stat_tracker.head_to_head('6')).to eq result
+  end
 end

@@ -114,14 +114,6 @@ RSpec.describe GameTeam do
     expect(@game_team.value_count(teams)).to eq result
   end
 
-  it '#percentage_wins' do
-    teams = { '6' => { 'away' => 1, 'home' => 2 } }
-    game_count = { '6' => 4.0 }
-    result = { '6' => { 'away' => 0.25, 'home' => 0.5 } }
-
-    expect(@game_team.percentage_wins(teams, game_count)).to eq result
-  end
-
   it '#worst_fans' do
     expect(@game_team.worst_fans).to eq []
   end

@@ -98,8 +98,9 @@ class GameTeam
   def home_away_difference
     teams = win_groups
     group_by_hoa(teams)
-    game_count = games_count_by_team
-    percentage_wins(teams, game_count)
+    teams.each do |k, v|
+      v.each { |key, value| v[key] = value / games_count_by_team[k] }
+    end
   end
 
   def group_by_hoa(teams)
@@ -112,12 +113,6 @@ class GameTeam
   def value_count(teams)
     teams.each do |k, v|
       v.each { |key, value| v[key] = value.count }
-    end
-  end
-
-  def percentage_wins(group, count)
-    group.each do |k, v|
-      v.each { |key, value| v[key] = value / count[k] }
     end
   end
 
@@ -212,7 +207,7 @@ class GameTeam
     opponents = team_opponents(team_id)
     teams = opponents.group_by { |row| row[:team_id] }
     teams.each do |k,v|
-      teams[k] = v.count {|row| row[:won] == 'FALSE'} / v.count.to_f
+      teams[k] = (v.count {|row| row[:won] == 'FALSE'} / v.count.to_f).round(2)
     end
   end
 

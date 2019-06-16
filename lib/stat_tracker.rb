@@ -157,4 +157,10 @@ class StatTracker
   def worst_loss(team_id)
     @game_team.worst_loss(team_id)
   end
+
+  def head_to_head(team_id)
+    result = @game_team.opponents_results(team_id)
+    team_names = result.keys.map { |key| @team.find_name(key) }
+    team_names.zip(result.values).to_h
+  end
 end
