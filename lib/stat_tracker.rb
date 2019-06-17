@@ -163,4 +163,8 @@ class StatTracker
     team_names = result.keys.map { |key| @team.find_name(key) }
     team_names.zip(result.values).to_h
   end
+
+  def seasonal_summary(team_id)
+    @game.seasonal_summary(team_id)
+  end
 end

@@ -95,4 +95,62 @@ class Game
       seasons[key] = (wins / total)
     end
   end
+
+  def seasonal_summary(team_id)
+    games = @content.find_all do |r|
+      r[:away_team_id] == team_id || r[:home_team_id] == team_id
+    end
+    seasons = games.group_by { |r| r[:season] }
+    seasons.each do |k, v|
+      seasons[k] = v.group_by { |r| r[:type] }
+    end
+
+    summary = {}
+
+    seasons.each do |season, type|
+      type.each do |letter, rows|
+        team_goals = rows.inject(0) do |sum, r|
+          value = if r[:away_team_id] == team_id
+            r[:away_goals].to_i
+          else
+            r[:home_goals].to_i
+          end
+          sum + value
+        end
+        opponent_goals = rows.inject(0) do |sum, r|
+          value = if r[:away_team_id] != team_id
+            r[:away_goals].to_i
+          else
+            r[:home_goals].to_i
+          end
+          sum + value
+        end
+        matches = rows.count.to_f
+        wins = rows.count do |r|
+          if r[:away_team_id] == team_id
+            r[:away_goals].to_i - r[:home_goals].to_i > 0
+          else
+            r[:home_goals].to_i - r[:away_goals].to_i > 0
+          end
+        end
+        result = {
+          win_percentage: wins/matches,
+          total_goals_scored: team_goals,
+          total_goals_against: opponent_goals,
+          average_goals_scored: team_goals/matches,
+          average_goals_against: opponent_goals/matches
+        }
+        type[letter] = result
+      end
+      type.map do |k,v|
+        if k == 'P'
+          new_value = {postseason: v}
+        else
+          new_value = {regular_season: v}
+        end
+        summary[season] = new_value
+      end
+    end
+    summary
+  end
 end

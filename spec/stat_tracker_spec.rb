@@ -168,4 +168,27 @@ RSpec.describe StatTracker do
 
     expect(@stat_tracker.head_to_head('6')).to eq result
   end
+
+  it '#seasonal_summary' do
+    result = {
+      "20122013" => {
+        postseason: {
+          :win_percentage=>0.75,
+          :total_goals_scored=>13,
+          :total_goals_against=>9,
+          :average_goals_scored=>3.25,
+          :average_goals_against=>2.25
+        },
+        regular_season: {
+          :win_percentage=>0.0,
+          :total_goals_scored=>0,
+          :total_goals_against=>0,
+          :average_goals_scored=>0.0,
+          :average_goals_against=>0.0
+        }
+      }
+    }
+
+    expect(@stat_tracker.seasonal_summary('6')).to eq result
+  end
 end
