@@ -104,10 +104,23 @@ class Game
   end
 
   def seasonal_summary(team_id)
-    games = find_all_team_games(team_id)
-    seasons = games.group_by { |r| r[:season] }
-    seasons.each { |k, v| seasons[k] = v.group_by { |r| r[:type] } }
+    seasons = games_by_season_and_type(team_id)
+    summary_builder(seasons, team_id)
 
+    seasons.each do |season, type|
+      seasons[season] = {
+        postseason: seasons[season]['P'].nil? ? null_summary : seasons[season]['P'],
+        regular_season: seasons[season]['R'].nil? ? null_summary : seasons[season]['R']
+      }
+    end
+  end
+
+  def games_by_season_and_type(team_id)
+    seasons = find_all_team_games(team_id).group_by { |r| r[:season] }
+    seasons.each { |k, v| seasons[k] = v.group_by { |r| r[:type] } }
+  end
+
+  def summary_builder(seasons, team_id)
     seasons.each do |season, type|
       type.each do |letter, rows|
         team_goals = team_goals(rows, team_id)
@@ -116,13 +129,6 @@ class Game
         games = rows.count.to_f
         type[letter] = summary(wins, games, team_goals, opponent_goals)
       end
-    end
-
-    seasons.each do |season, type|
-      seasons[season] = {
-        postseason: seasons[season]['P'].nil? ? null_summary : seasons[season]['P'],
-        regular_season: seasons[season]['R'].nil? ? null_summary : seasons[season]['R']
-      }
     end
   end
 
