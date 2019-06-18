@@ -1,4 +1,5 @@
 require 'CSV'
+require 'pry'
 
 class Game
   attr_reader :content
@@ -107,10 +108,6 @@ class Game
     seasons = games.group_by { |r| r[:season] }
     seasons.each { |k, v| seasons[k] = v.group_by { |r| r[:type] } }
 
-    season_names = seasons.keys
-    s_type = {postseason: 0, regular_season: 0}
-    result = season_names.map { |season| [season, s_type] }.to_h
-
     seasons.each do |season, type|
       type.each do |letter, rows|
         team_goals = team_goals(rows, team_id)
@@ -120,26 +117,14 @@ class Game
         type[letter] = summary(wins, games, team_goals, opponent_goals)
       end
     end
-    result.each do |season, type_summary|
-      type_summary.each do |type_name, summary_results|
-        if type_name == :postseason
-          if seasons[season]['P'].nil?
-            result[season][type_name] = null_summary
-          else
-            result[season][type_name] = seasons[season]['P']
-          end
-        elsif type_name == :regular_season
-          if seasons[season]['R'].nil?
-            result[season][type_name] = null_summary
-          else
-            result[season][type_name] = seasons[season]['R']
-          end
-        end
-      end
-    end
 
-    result
-  end 
+    seasons.each do |season, type|
+      seasons[season] = {
+        postseason: seasons[season]['P'].nil? ? null_summary : seasons[season]['P'],
+        regular_season: seasons[season]['R'].nil? ? null_summary : seasons[season]['R']
+      }
+    end
+  end
 
   def team_goals(rows, team_id)
     rows.inject(0) do |sum, row|
