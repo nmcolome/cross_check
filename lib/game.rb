@@ -96,61 +96,100 @@ class Game
     end
   end
 
-  def seasonal_summary(team_id)
-    games = @content.find_all do |r|
-      r[:away_team_id] == team_id || r[:home_team_id] == team_id
+  def find_all_team_games(team_id)
+    @content.find_all do |row|
+      row[:away_team_id] == team_id || row[:home_team_id] == team_id
     end
-    seasons = games.group_by { |r| r[:season] }
-    seasons.each do |k, v|
-      seasons[k] = v.group_by { |r| r[:type] }
-    end
+  end
 
-    summary = {}
+  def seasonal_summary(team_id)
+    games = find_all_team_games(team_id)
+    seasons = games.group_by { |r| r[:season] }
+    seasons.each { |k, v| seasons[k] = v.group_by { |r| r[:type] } }
+
+    season_names = seasons.keys
+    s_type = {postseason: 0, regular_season: 0}
+    result = season_names.map { |season| [season, s_type] }.to_h
 
     seasons.each do |season, type|
       type.each do |letter, rows|
-        team_goals = rows.inject(0) do |sum, r|
-          value = if r[:away_team_id] == team_id
-            r[:away_goals].to_i
-          else
-            r[:home_goals].to_i
-          end
-          sum + value
-        end
-        opponent_goals = rows.inject(0) do |sum, r|
-          value = if r[:away_team_id] != team_id
-            r[:away_goals].to_i
-          else
-            r[:home_goals].to_i
-          end
-          sum + value
-        end
-        matches = rows.count.to_f
-        wins = rows.count do |r|
-          if r[:away_team_id] == team_id
-            r[:away_goals].to_i - r[:home_goals].to_i > 0
-          else
-            r[:home_goals].to_i - r[:away_goals].to_i > 0
-          end
-        end
-        result = {
-          win_percentage: wins/matches,
-          total_goals_scored: team_goals,
-          total_goals_against: opponent_goals,
-          average_goals_scored: team_goals/matches,
-          average_goals_against: opponent_goals/matches
-        }
-        type[letter] = result
-      end
-      type.map do |k,v|
-        if k == 'P'
-          new_value = {postseason: v}
-        else
-          new_value = {regular_season: v}
-        end
-        summary[season] = new_value
+        team_goals = team_goals(rows, team_id)
+        opponent_goals = opponent_goals(rows, team_id)
+        wins = wins(rows, team_id)
+        games = rows.count.to_f
+        type[letter] = summary(wins, games, team_goals, opponent_goals)
       end
     end
-    summary
+    result.each do |season, type_summary|
+      type_summary.each do |type_name, summary_results|
+        if type_name == :postseason
+          if seasons[season]['P'].nil?
+            result[season][type_name] = null_summary
+          else
+            result[season][type_name] = seasons[season]['P']
+          end
+        elsif type_name == :regular_season
+          if seasons[season]['R'].nil?
+            result[season][type_name] = null_summary
+          else
+            result[season][type_name] = seasons[season]['R']
+          end
+        end
+      end
+    end
+
+    result
+  end 
+
+  def team_goals(rows, team_id)
+    rows.inject(0) do |sum, row|
+      value = if row[:away_team_id] == team_id
+        row[:away_goals].to_i
+      else
+        row[:home_goals].to_i
+      end
+      sum + value
+    end
+  end
+
+  def opponent_goals(rows, team_id)
+    rows.inject(0) do |sum, row|
+      value = if row[:away_team_id] != team_id
+        row[:away_goals].to_i
+      else
+        row[:home_goals].to_i
+      end
+      sum + value
+    end
+  end
+
+  def wins(rows, team_id)
+    rows.count do |row|
+      if row[:away_team_id] == team_id
+        row[:away_goals].to_i - row[:home_goals].to_i > 0
+      else
+        row[:home_goals].to_i - row[:away_goals].to_i > 0
+      end
+    end
+  end
+
+  def summary(wins, games, team_goals, opponent_goals)
+      {
+        win_percentage: (wins/games).round(2),
+        total_goals_scored: team_goals,
+        total_goals_against: opponent_goals,
+        average_goals_scored: (team_goals/games).round(2),
+        average_goals_against: (opponent_goals/games).round(2)
+      }
+  end
+
+  def null_summary
+    {
+      :win_percentage=>0.0,
+      :total_goals_scored=>0,
+      :total_goals_against=>0,
+      :average_goals_scored=>0.0,
+      :average_goals_against=>0.0
+    }
   end
 end
