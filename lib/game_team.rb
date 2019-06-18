@@ -198,7 +198,7 @@ class GameTeam
 
   def team_opponents(team_id)
     games = game_per_team(team_id)
-    game_ids = games.map {|row| row[:game_id]}
+    game_ids = games.map { |row| row[:game_id] }
     games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
     games.flatten.find_all { |row| row[:team_id] != team_id }
   end
@@ -206,8 +206,8 @@ class GameTeam
   def opponents_results(team_id)
     opponents = team_opponents(team_id)
     teams = opponents.group_by { |row| row[:team_id] }
-    teams.each do |k,v|
-      teams[k] = (v.count {|row| row[:won] == 'FALSE'} / v.count.to_f).round(2)
+    teams.each do |k, v|
+      teams[k] = (v.count { |row| row[:won] == 'FALSE' } / v.count.to_f).round(2)
     end
   end
 
@@ -223,9 +223,9 @@ class GameTeam
     games = @content.find_all do |row|
       row[:team_id] == team_id && row[:won] == won
     end
-    game_ids = games.map {|row| row[:game_id]}
+    game_ids = games.map { |row| row[:game_id] }
     games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
-    results = games.map do |pair|
+    games.map do |pair|
       (pair[0][:goals].to_i - pair[1][:goals].to_i).abs
     end
   end

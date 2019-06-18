@@ -135,10 +135,10 @@ class Game
   def team_goals(rows, team_id)
     rows.inject(0) do |sum, row|
       value = if row[:away_team_id] == team_id
-        row[:away_goals].to_i
-      else
-        row[:home_goals].to_i
-      end
+                row[:away_goals].to_i
+              else
+                row[:home_goals].to_i
+              end
       sum + value
     end
   end
@@ -146,10 +146,10 @@ class Game
   def opponent_goals(rows, team_id)
     rows.inject(0) do |sum, row|
       value = if row[:away_team_id] != team_id
-        row[:away_goals].to_i
-      else
-        row[:home_goals].to_i
-      end
+                row[:away_goals].to_i
+              else
+                row[:home_goals].to_i
+              end
       sum + value
     end
   end
@@ -165,22 +165,22 @@ class Game
   end
 
   def summary(wins, games, team_goals, opponent_goals)
-      {
-        win_percentage: (wins/games).round(2),
-        total_goals_scored: team_goals,
-        total_goals_against: opponent_goals,
-        average_goals_scored: (team_goals/games).round(2),
-        average_goals_against: (opponent_goals/games).round(2)
-      }
+    {
+      win_percentage: (wins / games).round(2),
+      total_goals_scored: team_goals,
+      total_goals_against: opponent_goals,
+      average_goals_scored: (team_goals / games).round(2),
+      average_goals_against: (opponent_goals / games).round(2)
+    }
   end
 
   def null_summary
     {
-      :win_percentage=>0.0,
-      :total_goals_scored=>0,
-      :total_goals_against=>0,
-      :average_goals_scored=>0.0,
-      :average_goals_against=>0.0
+      win_percentage: 0.0,
+      total_goals_scored: 0,
+      total_goals_against: 0,
+      average_goals_scored: 0.0,
+      average_goals_against: 0.0
     }
   end
 end
