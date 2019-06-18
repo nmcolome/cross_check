@@ -1,5 +1,5 @@
 require 'CSV'
-
+require 'pry'
 class GameTeam
   attr_reader :content
 
@@ -14,11 +14,11 @@ class GameTeam
   end
 
   def best_offense
-    total_goals_by_team.max_by { |key,value| value }[0]
+    total_goals_by_team.max_by { |key, value| value }[0]
   end
 
   def worst_offense
-    total_goals_by_team.min_by { |key,value| value }[0]
+    total_goals_by_team.min_by { |key, value| value }[0]
   end
 
   def total_goals_by_team
@@ -26,7 +26,7 @@ class GameTeam
     goals_by_team.each do |key, value|
       goals = value.map { |row| row[:goals].to_i }
       total = goals.inject(&:+)
-      goals_by_team[key] = total/ goals.count.to_f
+      goals_by_team[key] = total / goals.count.to_f
     end
   end
 
@@ -51,7 +51,7 @@ class GameTeam
   end
 
   def hoa_goals(status)
-    group = @content.group_by {|row| row[:hoa] == status }[true]
+    group = @content.group_by { |row| row[:hoa] == status }[true]
     goals_by_team = group.group_by { |row| row[:team_id] }
     goals_by_team.each do |key, value|
       goals = value.map { |row| row[:goals].to_i }
@@ -66,11 +66,11 @@ class GameTeam
 
   def average(type, status)
     game_count = games_count_by_team
-    type.each { |key, value| type[key] = value/game_count[key] }
+    type.each { |key, value| type[key] = value / game_count[key] }
     if status == 'max'
-      type.max_by { |key,value| value }[0]
+      type.max_by { |key, value| value }[0]
     else
-      type.min_by { |key,value| value }[0]
+      type.min_by { |key, value| value }[0]
     end
   end
 
@@ -91,15 +91,16 @@ class GameTeam
 
   def best_fans
     teams = home_away_difference
-    teams.each { |k,v| v['dif'] = (v['home'] - v['away']).abs }
-    teams.max_by { |key,value| value['dif'] }[0]
+    teams.each { |k, v| v['dif'] = (v['home'] - v['away']).abs }
+    teams.max_by { |key, value| value['dif'] }[0]
   end
 
   def home_away_difference
     teams = win_groups
     group_by_hoa(teams)
-    game_count = games_count_by_team
-    percentage_wins(teams, game_count)
+    teams.each do |k, v|
+      v.each { |key, value| v[key] = value / games_count_by_team[k] }
+    end
   end
 
   def group_by_hoa(teams)
@@ -115,17 +116,11 @@ class GameTeam
     end
   end
 
-  def percentage_wins(group, count)
-    group.each do |k, v|
-      v.each { |key, value| v[key] = value/count[k] }
-    end
-  end
-
   def worst_fans
     teams = home_away_difference
-    teams.each { |k,v| v['dif'] = (v['away'] - v['home']) }
-    result = teams.find_all {|k,v| v['dif'] > 0 }
-    result.map {|e| e[0]}
+    teams.each { |k, v| v['dif'] = (v['away'] - v['home']) }
+    result = teams.find_all { |k, v| v['dif'] > 0 }
+    result.map { |e| e[0] }
   end
 
   def best_defense
@@ -138,31 +133,100 @@ class GameTeam
     average(goals, 'max')
   end
 
-  def goals_allowed(goals, index_1, index_2)
-    if goals[index_1[:team_id]]
-      goals[index_1[:team_id]] += index_2[:goals].to_i
+  def goals_allowed(goals, index_one, index_two)
+    if goals[index_one[:team_id]]
+      goals[index_one[:team_id]] += index_two[:goals].to_i
     else
-      goals[index_1[:team_id]] = index_2[:goals].to_i
+      goals[index_one[:team_id]] = index_two[:goals].to_i
     end
   end
 
-  def goals_switch(game, index, goals)
-    [0,1].each do |index|
-      if index % 2 != 0
-        index_1 = game[1][0]
-        index_2 = game[1][1]
+  def goals_switch(game, goals)
+    [0, 1].each do |index|
+      if index.odd?
+        index_one = game[1][0]
+        index_two = game[1][1]
       else
-        index_1 = game[1][1]
-        index_2 = game[1][0]
+        index_one = game[1][1]
+        index_two = game[1][0]
       end
-      goals_allowed(goals, index_1, index_2)
+      goals_allowed(goals, index_one, index_two)
     end
   end
 
   def ga_calculation
     games = @content.group_by { |row| row[:game_id] }
     goals = {}
-    games.each_with_index { |group, i| goals_switch(group, i, goals) }
+    games.each { |group| goals_switch(group, goals) }
     goals
+  end
+
+  def game_per_team(team_id)
+    @content.find_all { |row| row[:team_id] == team_id }
+  end
+
+  def average_win_percentage(team_id)
+    games = game_per_team(team_id)
+    wins = games.count { |row| row[:won] == 'TRUE' }
+    total = games.count.to_f
+    (wins / total).round(2)
+  end
+
+  def most_goals_scored(team_id)
+    games = game_per_team(team_id)
+    goals = games.map { |r| r[:goals].to_i }
+    goals.max
+  end
+
+  def fewest_goals_scored(team_id)
+    games = game_per_team(team_id)
+    goals = games.map { |r| r[:goals].to_i }
+    goals.min
+  end
+
+  def favorite_opponent(team_id)
+    teams = opponents_results(team_id)
+    fave_opp = teams.values.max
+    teams.key(fave_opp)
+  end
+
+  def rival(team_id)
+    teams = opponents_results(team_id)
+    rival = teams.values.min
+    teams.key(rival)
+  end
+
+  def team_opponents(team_id)
+    games = game_per_team(team_id)
+    game_ids = games.map { |row| row[:game_id] }
+    games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
+    games.flatten.find_all { |row| row[:team_id] != team_id }
+  end
+
+  def opponents_results(team_id)
+    opponents = team_opponents(team_id)
+    teams = opponents.group_by { |row| row[:team_id] }
+    teams.each do |k, v|
+      teams[k] = (v.count { |row| row[:won] == 'FALSE' } / v.count.to_f).round(2)
+    end
+  end
+
+  def biggest_team_blowout(team_id)
+    goal_difference(team_id, 'TRUE').max
+  end
+
+  def worst_loss(team_id)
+    goal_difference(team_id, 'FALSE').max
+  end
+
+  def goal_difference(team_id, won)
+    games = @content.find_all do |row|
+      row[:team_id] == team_id && row[:won] == won
+    end
+    game_ids = games.map { |row| row[:game_id] }
+    games = game_ids.map { |id| @content.find_all { |r| r[:game_id] == id } }
+    games.map do |pair|
+      (pair[0][:goals].to_i - pair[1][:goals].to_i).abs
+    end
   end
 end

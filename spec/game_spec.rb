@@ -46,8 +46,8 @@ RSpec.describe Game do
 
   it '#count_of_games_by_season' do
     result = {
-      "20122013" => 6,
-      "20132014" => 3
+      '20122013' => 6,
+      '20132014' => 3
     }
 
     expect(@game.count_of_games_by_season).to eq result
@@ -59,10 +59,79 @@ RSpec.describe Game do
 
   it '#average_goals_by_season' do
     result = {
-      "20122013" => 5.0,
-      "20132014" => 6.0
+      '20122013' => 5.0,
+      '20132014' => 6.0
     }
 
     expect(@game.average_goals_by_season).to eq result
+  end
+
+  it '#best_season' do
+    input = [
+      { game_id: '2012030221', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030222', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030223', team_id: '3', won: 'FALSE', goals: '1' }
+    ]
+
+    expect(@game.best_season(input)).to eq '20122013'
+  end
+
+  it '#worst_season' do
+    input = [
+      { game_id: '2012030221', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030222', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030223', team_id: '3', won: 'FALSE', goals: '1' }
+    ]
+
+    expect(@game.worst_season(input)).to eq '20122013'
+  end
+
+  it '#season_finder' do
+    input = [
+      { game_id: '2012030221', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030222', team_id: '3', won: 'FALSE', goals: '2' },
+      { game_id: '2012030223', team_id: '3', won: 'FALSE', goals: '1' }
+    ]
+    result = [
+      { game_id: '2012030221', won: 'FALSE', season: '20122013' },
+      { game_id: '2012030222', won: 'FALSE', season: '20122013' },
+      { game_id: '2012030223', won: 'FALSE', season: '20122013' }
+    ]
+
+    expect(@game.season_finder(input)).to eq result
+  end
+
+  it '#win_percentages' do
+    input = [
+      { game_id: '2012030221', won: 'FALSE', season: '20122013' },
+      { game_id: '2012030222', won: 'FALSE', season: '20122013' },
+      { game_id: '2012030223', won: 'FALSE', season: '20122013' }
+    ]
+    result = { '20122013' => 0.0 }
+
+    expect(@game.win_percentages(input)).to eq result
+  end
+
+  it '#seasonal_summary' do
+    result = {
+      "20122013" => {
+        postseason: {
+          :win_percentage=>0.75,
+          :total_goals_scored=>13,
+          :total_goals_against=>9,
+          :average_goals_scored=>3.25,
+          :average_goals_against=>2.25
+        },
+        regular_season: {
+          :win_percentage=>0.0,
+          :total_goals_scored=>0,
+          :total_goals_against=>0,
+          :average_goals_scored=>0.0,
+          :average_goals_against=>0.0
+        }
+      }
+    }
+
+    expect(@game.seasonal_summary('6')).to eq result
   end
 end

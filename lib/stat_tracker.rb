@@ -2,6 +2,7 @@ require 'CSV'
 require_relative './game.rb'
 require_relative './team.rb'
 require_relative './game_team.rb'
+require 'pry'
 
 class StatTracker
   attr_reader :game, :team, :game_team
@@ -111,5 +112,59 @@ class StatTracker
   def worst_defense
     team_id = @game_team.worst_defense
     @team.find_name(team_id)
+  end
+
+  def team_info(team_id)
+    @team.team_info(team_id)
+  end
+
+  def best_season(team_id)
+    games = @game_team.game_per_team(team_id)
+    @game.best_season(games)
+  end
+
+  def worst_season(team_id)
+    games = @game_team.game_per_team(team_id)
+    @game.worst_season(games)
+  end
+
+  def average_win_percentage(team_id)
+    @game_team.average_win_percentage(team_id)
+  end
+
+  def most_goals_scored(team_id)
+    @game_team.most_goals_scored(team_id)
+  end
+
+  def fewest_goals_scored(team_id)
+    @game_team.fewest_goals_scored(team_id)
+  end
+
+  def favorite_opponent(team_id)
+    id = @game_team.favorite_opponent(team_id)
+    @team.find_name(id)
+  end
+
+  def rival(team_id)
+    id = @game_team.rival(team_id)
+    @team.find_name(id)
+  end
+
+  def biggest_team_blowout(team_id)
+    @game_team.biggest_team_blowout(team_id)
+  end
+
+  def worst_loss(team_id)
+    @game_team.worst_loss(team_id)
+  end
+
+  def head_to_head(team_id)
+    result = @game_team.opponents_results(team_id)
+    team_names = result.keys.map { |key| @team.find_name(key) }
+    team_names.zip(result.values).to_h
+  end
+
+  def seasonal_summary(team_id)
+    @game.seasonal_summary(team_id)
   end
 end

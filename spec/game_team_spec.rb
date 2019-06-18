@@ -33,7 +33,7 @@ RSpec.describe GameTeam do
   end
 
   it '#total_goals_by_team' do
-    result = {'3'=>1.6666666666666667, '6'=>3.3333333333333335}
+    result = { '3' => 1.6666666666666667, '6' => 3.3333333333333335 }
 
     expect(@game_team.total_goals_by_team).to eq result
   end
@@ -47,22 +47,22 @@ RSpec.describe GameTeam do
   end
 
   it '#hoa_goals' do
-    away_result = {'3'=>4, '6'=>2 }
-    home_result = {'3'=>1, '6'=>8}
+    away_result = { '3' => 4, '6' => 2 }
+    home_result = { '3' => 1, '6' => 8 }
 
     expect(@game_team.hoa_goals('away')).to eq away_result
     expect(@game_team.hoa_goals('home')).to eq home_result
   end
 
   it '#games_count_by_team' do
-    result = {'3'=>3.0, '6'=>3.0}
+    result = { '3' => 3.0, '6' => 3.0 }
 
     expect(@game_team.games_count_by_team).to eq result
   end
 
   it '#average' do
-    away = {'3'=>4, '6'=>5}
-    home = {'3'=>1, '6'=>8}
+    away = { '3' => 4, '6' => 5 }
+    home = { '3' => 1, '6' => 8 }
 
     expect(@game_team.average(away, 'max')).to eq '6'
     expect(@game_team.average(home, 'max')).to eq '6'
@@ -91,38 +91,27 @@ RSpec.describe GameTeam do
   end
 
   it '#home_away_difference' do
-    result = {"6"=>{"away"=>0.3333333333333333, "home"=>0.6666666666666666}}
+    result = { '6' =>
+                { 'away' => 0.3333333333333333, 'home' => 0.6666666666666666 } }
 
     expect(@game_team.home_away_difference).to eq result
   end
 
   it '#group_by_hoa' do
-    teams = {"6"=>
-      [game_id:'2012030221', team_id:'6', hoa:'home', won:'TRUE', settled_in:'OT', head_coach:'Claude Julien', goals:'3']}
+    teams = { '6' =>
+      [game_id: '2012030221', team_id: '6', hoa: 'home', goals: '3'] }
 
-    result = {'6'=>{'home'=>1}}
+    result = { '6' => { 'home' => 1 } }
 
     expect(@game_team.group_by_hoa(teams)).to eq result
   end
 
   it '#value_count' do
-    teams = { "6" => {
-                      'home' => ['row', 'row'],
-                      'away'=> ['row']
-                      }
-            }
+    teams = { '6' => { 'home' => %w[row row], 'away' => ['row'] } }
 
-    result = {'6'=>{'away'=>1, 'home'=>2}}
+    result = { '6' => { 'away' => 1, 'home' => 2 } }
 
     expect(@game_team.value_count(teams)).to eq result
-  end
-
-  it '#percentage_wins' do
-    teams = {'6'=>{'away'=>1, 'home'=>2}}
-    game_count = {'6'=>4.0}
-    result = {'6'=>{'away'=>0.25, 'home'=>0.5}}
-
-    expect(@game_team.percentage_wins(teams, game_count)).to eq result
   end
 
   it '#worst_fans' do
@@ -139,26 +128,59 @@ RSpec.describe GameTeam do
 
   it '#goals_allowed' do
     goals = {}
-    index_1 = { team_id:'6', hoa:'home', won:'TRUE', goals:'3' }
-    index_2 = { team_id:'3', hoa:'away', won:'FALSE', goals:'2' }
+    index_one = { team_id: '6', hoa: 'home', won: 'TRUE', goals: '3' }
+    index_two = { team_id: '3', hoa: 'away', won: 'FALSE', goals: '2' }
 
-    expect(@game_team.goals_allowed(goals, index_1, index_2)).to eq 2
+    expect(@game_team.goals_allowed(goals, index_one, index_two)).to eq 2
   end
 
   it '#goals_switch' do
     goals = {}
     game = ['2012030221',
-      [{game_id:'2012030221', team_id:'3', hoa:'away', won:'FALSE',goals:'2'}, {game_id:'2012030221', team_id:'6', hoa:'home', won:'TRUE', goals:'3'}]]
-    index = 0
-    result = {'6' => 2, '3' => 3}
+      [{ game_id: '2012030221', team_id: '3', hoa: 'away', won: 'FALSE', goals: '2' },
+      { game_id: '2012030221', team_id: '6', hoa: 'home', won: 'TRUE', goals: '3' }]]
+    result = { '6' => 2, '3' => 3 }
 
-    expect(@game_team.goals_switch(game, index, goals)).to eq [0,1]
+    expect(@game_team.goals_switch(game, goals)).to eq [0, 1]
     expect(goals).to eq result
   end
 
   it '#ga_calculation' do
-    result = {'6' => 5, '3' => 10}
+    result = { '6' => 5, '3' => 10 }
 
     expect(@game_team.ga_calculation).to eq result
+  end
+
+  it '#game_per_team' do
+    expect(@game_team.game_per_team('3')).to be_an_instance_of Array
+    expect(@game_team.game_per_team('3').count).to eq 3
+  end
+
+  it '#average_win_percentage' do
+    expect(@game_team.average_win_percentage('6')).to eq 1.0
+  end
+
+  it '#most_goals_scored' do
+    expect(@game_team.most_goals_scored('6')).to eq 5
+  end
+
+  it '#fewest_goals_scored' do
+    expect(@game_team.fewest_goals_scored('6')).to eq 2
+  end
+
+  it '#favorite_opponent' do
+    expect(@game_team.favorite_opponent('6')).to eq '3'
+  end
+
+  it '#rival' do
+    expect(@game_team.rival('6')).to eq '3'
+  end
+
+  it '#biggest_team_blowout' do
+    expect(@game_team.biggest_team_blowout('6')).to eq 3
+  end
+
+  it '#worst_loss' do
+    expect(@game_team.worst_loss('3')).to eq 3
   end
 end

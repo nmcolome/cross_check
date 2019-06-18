@@ -31,4 +31,17 @@ RSpec.describe Team do
     expect(@team.find_name('1')).to eq 'Devils'
     expect(@team.find_name('14')).to eq 'Lightning'
   end
+
+  it '#team_info' do
+    result = {
+      'team_id' => '1',
+      'franchise_id' => '23',
+      'short_name' => 'New Jersey',
+      'team_name' => 'Devils',
+      'abbreviation' => 'NJD',
+      'link' => '/api/v1/teams/1'
+    }
+
+    expect(@team.team_info('1')).to eq result
+  end
 end

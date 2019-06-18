@@ -49,8 +49,8 @@ RSpec.describe StatTracker do
 
   it '#count_of_games_by_season' do
     result = {
-      "20122013" => 6,
-      "20132014" => 3
+      '20122013' => 6,
+      '20132014' => 3
     }
 
     expect(@stat_tracker.count_of_games_by_season).to eq result
@@ -61,10 +61,7 @@ RSpec.describe StatTracker do
   end
 
   it '#average_goals_by_season' do
-    result = {
-              "20122013" => 5.0,
-              "20132014" => 6.0
-             }
+    result = { '20122013' => 5.0, '20132014' => 6.0 }
 
     expect(@stat_tracker.average_goals_by_season).to eq result
   end
@@ -80,10 +77,6 @@ RSpec.describe StatTracker do
   it '#worst_offense' do
     expect(@stat_tracker.worst_offense).to eq 'Rangers'
   end
-
-  # it '#best_defense' do
-  #   expect(@stat_tracker.best_defense).to eq 'Bruins'
-  # end
 
   it '#highest_scoring_visitor' do
     expect(@stat_tracker.highest_scoring_visitor).to eq 'Rangers'
@@ -119,5 +112,83 @@ RSpec.describe StatTracker do
 
   it '#worst_defense' do
     expect(@stat_tracker.worst_defense).to eq 'Rangers'
+  end
+
+  it '#team_info' do
+    result = {
+      'team_id' => '1',
+      'franchise_id' => '23',
+      'short_name' => 'New Jersey',
+      'team_name' => 'Devils',
+      'abbreviation' => 'NJD',
+      'link' => '/api/v1/teams/1'
+    }
+
+    expect(@stat_tracker.team_info('1')).to eq result
+  end
+
+  it '#best_season' do
+    expect(@stat_tracker.best_season('3')).to eq '20122013'
+  end
+
+  it '#worst_season' do
+    expect(@stat_tracker.worst_season('3')).to eq '20122013'
+  end
+
+  it '#average_win_percentage' do
+    expect(@stat_tracker.average_win_percentage('6')).to eq 1.0
+  end
+
+  it '#most_goals_scored' do
+    expect(@stat_tracker.most_goals_scored('6')).to eq 5
+  end
+
+  it '#fewest_goals_scored' do
+    expect(@stat_tracker.fewest_goals_scored('6')).to eq 2
+  end
+
+  it '#favorite_opponent' do
+    expect(@stat_tracker.favorite_opponent('6')).to eq 'Rangers'
+  end
+
+  it '#rival' do
+    expect(@stat_tracker.rival('6')).to eq 'Rangers'
+  end
+
+  it '#biggest_team_blowout' do
+    expect(@stat_tracker.biggest_team_blowout('6')).to eq 3
+  end
+
+  it '#worst_loss' do
+    expect(@stat_tracker.worst_loss('3')).to eq 3
+  end
+
+  it '#head_to_head' do
+    result = {'Rangers' => 1.0 }
+
+    expect(@stat_tracker.head_to_head('6')).to eq result
+  end
+
+  it '#seasonal_summary' do
+    result = {
+      "20122013" => {
+        postseason: {
+          :win_percentage=>0.75,
+          :total_goals_scored=>13,
+          :total_goals_against=>9,
+          :average_goals_scored=>3.25,
+          :average_goals_against=>2.25
+        },
+        regular_season: {
+          :win_percentage=>0.0,
+          :total_goals_scored=>0,
+          :total_goals_against=>0,
+          :average_goals_scored=>0.0,
+          :average_goals_against=>0.0
+        }
+      }
+    }
+
+    expect(@stat_tracker.seasonal_summary('6')).to eq result
   end
 end
