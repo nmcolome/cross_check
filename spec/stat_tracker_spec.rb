@@ -319,4 +319,8 @@ RSpec.describe StatTracker do
   it '#biggest_bust' do
     expect(@stat_tracker.biggest_bust('20132014')).to eq 'Red Wings'
   end
+
+  it '#biggest_surprise' do
+    expect(@stat_tracker.biggest_surprise('20132014')).to eq 'Bruins'
+  end
 end

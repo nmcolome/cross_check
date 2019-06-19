@@ -243,6 +243,11 @@ class GameTeam
     result.key(result.values.max)
   end
 
+  def biggest_surprise(games)
+    result = difference_between_rp_seasons(games)
+    result.key(result.values.min)
+  end
+
   def get_data_by_game_type(games)
     games.each do |type, game_ids|
       games[type] = []

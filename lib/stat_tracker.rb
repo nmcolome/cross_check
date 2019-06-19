@@ -173,4 +173,10 @@ class StatTracker
     team_id = @game_team.biggest_bust(games)
     @team.find_name(team_id)
   end
+
+  def biggest_surprise(season_id)
+    games = @game.by_season_type(season_id)
+    team_id = @game_team.biggest_surprise(games)
+    @team.find_name(team_id)
+  end
 end
