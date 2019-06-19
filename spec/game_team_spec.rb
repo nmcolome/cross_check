@@ -101,4 +101,13 @@ RSpec.describe GameTeam do
   it '#worst_loss' do
     expect(@game_team.worst_loss('6')).to eq 7
   end
+
+  it '#biggest_bust' do
+    games = {
+      'P' => %w[2013030111 2013030112 2013030113 2013030114 2013030115 2013030211],
+      'R' => %w[2013020007 2013020021 2013020048 2013020068 2013020079 2013020103 2013020114 2013020138 2013020139 2013020155 2013020184 2013020188 2013020204 2012020138 2012020316 2012020488]
+    }
+
+    expect(@game_team.biggest_bust(games)).to eq '17'
+  end
 end

@@ -237,4 +237,33 @@ class GameTeam
       (pair[0][:goals].to_i - pair[1][:goals].to_i).abs
     end
   end
+
+  def biggest_bust(games)
+    games.each do |type, game_ids|
+      games[type] = []
+      game_ids.each do |game_id|
+        rows = @content.find_all { |row| row[:game_id] == game_id }
+        games[type] << rows
+      end
+      games[type].flatten!
+    end
+    #get rows by type
+    games.each { |k, v| games[k] = v.group_by { |r| r[:team_id] } }
+    #group info by type & team
+
+    games.each do |type, teams|
+      teams.each do |team_id, rows|
+        wins = rows.count { |row| row[:won] == 'TRUE' }
+        count = rows.count.to_f
+        teams[team_id] = (wins / count).round(2)
+      end
+    end
+    #calculate win % per type& team
+    result = {}
+    games['P'].each do |team_id, win_percent|
+      result[team_id] = games['R'][team_id] - win_percent
+    end
+    #calculate difference
+    result.key(result.values.max)
+  end
 end

@@ -183,4 +183,13 @@ class Game
       average_goals_against: 0.0
     }
   end
+
+  def by_season_type(season_id)
+    result = {'P' => [], 'R' => []}
+    season_info = @content.find_all { |r| r[:season] == season_id }
+    season_info.each do |r|
+      r[:type] == 'P' ? result['P'] << r[:game_id] : result['R'] << r[:game_id]
+    end
+    result
+  end
 end
