@@ -323,4 +323,12 @@ RSpec.describe StatTracker do
   it '#biggest_surprise' do
     expect(@stat_tracker.biggest_surprise('20132014')).to eq 'Bruins'
   end
+
+  it '#winningest_coach' do
+    expect(@stat_tracker.winningest_coach('20132014')).to eq 'Ken Hitchcock'
+  end
+
+  it '#worst_coach' do
+    expect(@stat_tracker.worst_coach('20132014')).to eq 'Jon Cooper'
+  end
 end

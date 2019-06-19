@@ -179,4 +179,14 @@ class StatTracker
     team_id = @game_team.biggest_surprise(games)
     @team.find_name(team_id)
   end
+
+  def winningest_coach(season_id)
+    game_ids = @game.get_season_games(season_id)
+    @game_team.winningest_coach(game_ids)
+  end
+
+  def worst_coach(season_id)
+    game_ids = @game.get_season_games(season_id)
+    @game_team.worst_coach(game_ids)
+  end
 end

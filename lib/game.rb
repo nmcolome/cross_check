@@ -192,4 +192,9 @@ class Game
     end
     result
   end
+
+  def get_season_games(season_id)
+    season_info = @content.find_all { |r| r[:season] == season_id }
+    season_info.map {|r| r[:game_id] }
+  end
 end

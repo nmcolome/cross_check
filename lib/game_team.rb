@@ -279,4 +279,35 @@ class GameTeam
     end
     result
   end
+
+  def winningest_coach(game_ids)
+    result = win_percent_by_coach(game_ids)
+    result.key(result.values.max)
+  end
+
+  def worst_coach(game_ids)
+    result = win_percent_by_coach(game_ids)
+    result.key(result.values.min)
+  end
+
+  def get_games_by_coach(game_ids)
+    games = game_ids.map do |game_id|
+      @content.find_all { |row| row[:game_id] == game_id }
+    end
+    games.flatten!
+  end
+
+  def wins_percent_by_coach_calc(coaches)
+    coaches.each do |coach, rows|
+      wins = rows.count { |row| row[:won] == 'TRUE' }
+      count = rows.count.to_f
+      coaches[coach] = (wins / count).round(2)
+    end
+  end
+
+  def win_percent_by_coach(game_ids)
+    games = get_games_by_coach(game_ids)
+    coaches = games.group_by { |r| r[:head_coach] }
+    wins_percent_by_coach_calc(coaches)
+  end
 end
