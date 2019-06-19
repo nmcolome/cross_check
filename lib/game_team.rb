@@ -239,6 +239,11 @@ class GameTeam
   end
 
   def biggest_bust(games)
+    result = difference_between_rp_seasons(games)
+    result.key(result.values.max)
+  end
+
+  def get_data_by_game_type(games)
     games.each do |type, game_ids|
       games[type] = []
       game_ids.each do |game_id|
@@ -247,10 +252,9 @@ class GameTeam
       end
       games[type].flatten!
     end
-    #get rows by type
-    games.each { |k, v| games[k] = v.group_by { |r| r[:team_id] } }
-    #group info by type & team
+  end
 
+  def wins_percent_by_type_and_team(games)
     games.each do |type, teams|
       teams.each do |team_id, rows|
         wins = rows.count { |row| row[:won] == 'TRUE' }
@@ -258,12 +262,16 @@ class GameTeam
         teams[team_id] = (wins / count).round(2)
       end
     end
-    #calculate win % per type& team
+  end
+
+  def difference_between_rp_seasons(games)
+    get_data_by_game_type(games)
+    games.each { |k, v| games[k] = v.group_by { |r| r[:team_id] } }
+    wins_percent_by_type_and_team(games)
     result = {}
     games['P'].each do |team_id, win_percent|
       result[team_id] = games['R'][team_id] - win_percent
     end
-    #calculate difference
-    result.key(result.values.max)
+    result
   end
 end
