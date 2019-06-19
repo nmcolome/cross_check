@@ -3,7 +3,7 @@ require './lib/team.rb'
 
 RSpec.describe Team do
   before(:all) do
-    @team_fixture = './data/team_fixture.csv'
+    @team_fixture = './data/team_info.csv'
 
     @team = Team.new
   end
@@ -19,12 +19,11 @@ RSpec.describe Team do
   it '#to_data adds content based on csv' do
     @team.to_data(@team_fixture)
     expect(@team.content).to be_an_instance_of Array
-    expect(@team.content.count).to eq 6
     expect(@team.content[0][:team_id]).to eq '1'
   end
 
   it '#count_of_teams' do
-    expect(@team.count_of_teams).to eq 6
+    expect(@team.count_of_teams).to eq 33
   end
 
   it '#find_name' do

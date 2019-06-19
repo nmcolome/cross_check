@@ -1,0 +1,511 @@
+﻿game_id,season,type,date_time,away_team_id,home_team_id,away_goals,home_goals,outcome,home_rink_side_start,venue,venue_link,venue_time_zone_id,venue_time_zone_offset,venue_time_zone_tz
+2012020004,20122013,R,1/20/13,3,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020020,20122013,R,1/21/13,52,6,1,2,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020037,20122013,R,1/24/13,6,3,3,4,home win OT,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020050,20122013,R,1/26/13,2,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020073,20122013,R,1/29/13,6,12,5,3,away win REG,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2012020078,20122013,R,1/30/13,1,6,1,2,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020092,20122013,R,2/1/13,7,6,7,4,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020111,20122013,R,2/3/13,6,10,1,0,away win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2012020138,20122013,R,2/7/13,6,8,2,1,away win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2012020154,20122013,R,4/25/13,14,6,0,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020168,20122013,R,2/11/13,6,7,3,1,away win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020179,20122013,R,2/13/13,3,6,4,3,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020197,20122013,R,2/16/13,6,7,2,4,home win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020214,20122013,R,2/17/13,6,52,3,2,away win REG,right,MTS Centre,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2012020243,20122013,R,2/22/13,6,14,4,2,away win REG,left,Tampa Bay Times Forum,/api/v1/venues/null,America/New_York,-4,EDT
+2012020262,20122013,R,2/24/13,6,13,4,1,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020278,20122013,R,2/27/13,6,2,4,1,away win REG,left,Nassau Coliseum,/api/v1/venues/null,America/New_York,-4,EDT
+2012020288,20122013,R,3/1/13,9,6,1,2,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020303,20122013,R,3/2/13,14,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020316,20122013,R,3/4/13,8,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020326,20122013,R,3/6/13,6,15,3,4,home win OT,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020339,20122013,R,3/8/13,10,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020355,20122013,R,3/9/13,4,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020375,20122013,R,3/11/13,6,9,3,2,away win SO,left,Scotiabank Place,/api/v1/venues/null,America/New_York,-4,EDT
+2012020380,20122013,R,3/12/13,6,5,2,3,home win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020391,20122013,R,3/14/13,13,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020405,20122013,R,3/16/13,15,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020418,20122013,R,3/17/13,6,5,1,2,home win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020435,20122013,R,3/20/13,6,52,1,3,home win REG,right,MTS Centre,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2012020447,20122013,R,3/21/13,6,9,2,1,away win REG,left,Scotiabank Place,/api/v1/venues/null,America/New_York,-4,EDT
+2012020459,20122013,R,3/23/13,6,10,2,3,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2012020472,20122013,R,3/25/13,10,6,2,3,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020488,20122013,R,3/27/13,8,6,6,5,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020506,20122013,R,3/30/13,6,4,1,3,home win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020519,20122013,R,3/31/13,6,7,2,0,away win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020531,20122013,R,4/2/13,9,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020543,20122013,R,4/4/13,1,6,0,1,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020562,20122013,R,4/6/13,6,8,1,2,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2012020577,20122013,R,4/8/13,12,6,2,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020591,20122013,R,4/10/13,6,1,5,4,away win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020596,20122013,R,4/11/13,2,6,2,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020615,20122013,R,4/13/13,6,12,2,4,home win REG,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2012020624,20122013,R,4/28/13,9,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020641,20122013,R,4/17/13,7,6,3,2,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020654,20122013,R,4/20/13,5,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020668,20122013,R,4/21/13,13,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012020684,20122013,R,4/23/13,6,4,2,5,home win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012020711,20122013,R,4/27/13,6,15,2,3,home win OT,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012030141,20122013,P,5/1/13,10,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030142,20122013,P,5/4/13,10,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030143,20122013,P,5/6/13,6,10,5,2,away win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2012030144,20122013,P,5/8/13,6,10,4,3,away win OT,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2012030145,20122013,P,5/10/13,10,6,2,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030146,20122013,P,5/12/13,6,10,1,2,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2012030147,20122013,P,5/13/13,10,6,4,5,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030221,20122013,P,5/16/13,3,6,2,3,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030222,20122013,P,5/19/13,3,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030223,20122013,P,5/21/13,6,3,2,1,away win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030224,20122013,P,5/23/13,6,3,3,4,home win OT,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030225,20122013,P,5/25/13,3,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030311,20122013,P,6/2/13,6,5,3,0,away win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012030312,20122013,P,6/4/13,6,5,6,1,away win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2012030313,20122013,P,6/6/13,5,6,1,2,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030314,20122013,P,6/8/13,5,6,0,1,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030411,20122013,P,6/13/13,6,16,3,4,home win OT,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2012030412,20122013,P,6/16/13,6,16,2,1,away win OT,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2012030413,20122013,P,6/18/13,16,6,0,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030414,20122013,P,6/20/13,16,6,6,5,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2012030415,20122013,P,6/23/13,6,16,1,3,home win REG,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2012030416,20122013,P,6/25/13,16,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020007,20132014,R,10/3/13,14,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020021,20132014,R,10/5/13,17,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020048,20132014,R,10/10/13,21,6,2,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020068,20132014,R,10/12/13,6,29,3,1,away win REG,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2013020079,20132014,R,10/14/13,17,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020103,20132014,R,10/17/13,6,13,3,2,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020114,20132014,R,10/19/13,6,14,5,0,away win REG,left,Tampa Bay Times Forum,/api/v1/venues/null,America/New_York,-4,EDT
+2013020138,20132014,R,10/24/13,6,7,5,2,away win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020139,20132014,R,10/24/13,28,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020155,20132014,R,10/26/13,1,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020184,20132014,R,10/31/13,6,5,2,3,home win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020188,20132014,R,10/31/13,24,6,2,3,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020204,20132014,R,11/2/13,6,2,1,3,home win REG,left,Nassau Coliseum,/api/v1/venues/null,America/New_York,-4,EDT
+2013020217,20132014,R,11/6/13,25,6,3,2,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020230,20132014,R,11/8/13,13,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020247,20132014,R,11/10/13,10,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020262,20132014,R,11/11/13,14,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020277,20132014,R,11/15/13,29,6,2,3,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020289,20132014,R,11/16/13,6,9,2,4,home win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2013020309,20132014,R,11/19/13,6,12,4,1,away win REG,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2013020317,20132014,R,11/20/13,6,3,2,1,away win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020326,20132014,R,11/22/13,19,6,3,2,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020341,20132014,R,11/23/13,12,6,2,3,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020355,20132014,R,11/26/13,5,6,3,4,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020370,20132014,R,11/28/13,6,17,1,6,home win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2013020380,20132014,R,11/29/13,3,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020393,20132014,R,12/1/13,29,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020425,20132014,R,12/6/13,6,8,1,2,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2013020438,20132014,R,12/8/13,5,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020450,20132014,R,12/9/13,6,10,5,2,away win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2013020467,20132014,R,12/11/13,6,20,2,1,away win REG,right,Scotiabank Saddledome,/api/v1/venues/null,America/Denver,-6,MDT
+2013020482,20132014,R,12/13/13,6,22,4,2,away win REG,left,Rexall Place,/api/v1/venues/null,America/Edmonton,-6,MDT
+2013020498,20132014,R,12/15/13,6,23,2,6,home win REG,right,Rogers Arena,/api/v1/venues/null,America/Vancouver,-7,PDT
+2013020509,20132014,R,12/18/13,20,6,0,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020523,20132014,R,12/20/13,6,7,2,4,home win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020541,20132014,R,12/22/13,7,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020562,20132014,R,12/24/13,6,18,6,2,away win REG,left,Bridgestone Arena,/api/v1/venues/null,America/Chicago,-5,CDT
+2013020567,20132014,R,12/28/13,9,6,0,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020577,20132014,R,12/29/13,6,9,3,4,home win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2013020602,20132014,R,1/1/14,2,6,5,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020612,20132014,R,1/3/14,18,6,2,3,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020626,20132014,R,1/4/14,52,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020655,20132014,R,1/8/14,6,24,2,5,home win REG,left,Honda Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2013020667,20132014,R,1/10/14,6,26,2,4,home win REG,right,Staples Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2013020684,20132014,R,1/12/14,6,28,1,0,away win REG,left,SAP Center at San Jose,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2013020696,20132014,R,1/15/14,10,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020717,20132014,R,1/17/14,6,25,4,2,away win REG,right,American Airlines Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2013020736,20132014,R,1/19/14,6,16,2,3,home win SO,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2013020739,20132014,R,1/20/14,26,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020776,20132014,R,1/25/14,6,4,6,1,away win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020789,20132014,R,1/28/14,6,2,6,3,away win REG,left,Nassau Coliseum,/api/v1/venues/null,America/New_York,-4,EDT
+2013020795,20132014,R,1/29/14,13,6,2,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020809,20132014,R,1/31/14,8,6,4,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020824,20132014,R,2/1/14,22,6,0,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020844,20132014,R,2/5/14,23,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020864,20132014,R,2/7/14,6,19,2,3,home win OT,left,Scottrade Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2013020874,20132014,R,2/8/14,9,6,2,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020882,20132014,R,2/27/14,6,7,4,5,home win OT,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020902,20132014,R,3/1/14,15,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020916,20132014,R,3/3/14,6,3,6,3,away win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020924,20132014,R,3/5/14,13,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020938,20132014,R,3/7/14,15,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013020956,20132014,R,3/9/14,6,14,4,3,away win SO,left,Tampa Bay Times Forum,/api/v1/venues/null,America/New_York,-4,EDT
+2013020963,20132014,R,3/9/14,6,13,5,2,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013020985,20132014,R,3/12/14,6,8,4,1,away win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2013020989,20132014,R,3/13/14,27,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021004,20132014,R,3/15/14,12,6,1,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021022,20132014,R,3/17/14,30,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021026,20132014,R,3/18/14,6,1,4,2,away win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013021053,20132014,R,3/22/14,6,21,2,0,away win REG,right,Pepsi Center,/api/v1/venues/null,America/Denver,-6,MDT
+2013021063,20132014,R,3/23/14,6,27,4,2,away win REG,NA,Jobing.com Arena,/api/v1/venues/null,America/Phoenix,-7,MST
+2013021075,20132014,R,3/24/14,8,6,2,1,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021092,20132014,R,3/27/14,16,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021108,20132014,R,3/29/14,6,15,4,2,away win REG,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013021121,20132014,R,3/30/14,6,4,4,3,away win SO,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013021141,20132014,R,4/3/14,6,17,2,3,home win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2013021144,20132014,R,4/3/14,6,10,3,4,home win OT,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2013021160,20132014,R,4/5/14,4,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021187,20132014,R,4/9/14,6,30,3,4,home win SO,right,Xcel Energy Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2013021202,20132014,R,4/11/14,6,52,1,2,home win SO,right,MTS Centre,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2013021212,20132014,R,4/12/14,7,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013021221,20132014,R,4/13/14,6,1,2,3,home win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2013030111,20132014,P,4/18/14,17,6,1,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013030112,20132014,P,4/20/14,17,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013030113,20132014,P,4/22/14,6,17,3,0,away win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2013030114,20132014,P,4/25/14,6,17,3,2,away win OT,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2013030115,20132014,P,4/26/14,17,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013030211,20132014,P,5/1/14,8,6,4,3,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013030212,20132014,P,5/3/14,8,6,3,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013030213,20132014,P,5/6/14,6,8,2,4,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2013030214,20132014,P,5/8/14,6,8,1,0,away win OT,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2013030215,20132014,P,5/10/14,8,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2013030216,20132014,P,5/12/14,6,8,0,4,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2013030217,20132014,P,5/14/14,8,6,3,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020002,20142015,R,10/8/14,4,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020009,20142015,R,10/9/14,6,17,1,2,home win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2014020018,20142015,R,10/11/14,15,6,4,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020035,20142015,R,10/13/14,21,6,2,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020047,20142015,R,10/16/14,6,17,3,2,away win SO,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2014020053,20142015,R,10/16/14,6,8,4,6,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2014020063,20142015,R,10/18/14,6,7,4,0,away win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014020079,20142015,R,10/21/14,28,6,3,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020093,20142015,R,10/23/14,2,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020107,20142015,R,10/25/14,6,10,4,1,away win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2014020124,20142015,R,10/28/14,30,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020138,20142015,R,10/30/14,6,7,3,2,away win OT,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014020153,20142015,R,11/1/14,9,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020172,20142015,R,11/5/14,13,6,1,2,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020187,20142015,R,11/7/14,22,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020218,20142015,R,11/11/14,1,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020231,20142015,R,11/13/14,6,10,1,6,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2014020235,20142015,R,11/14/14,6,8,1,5,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2014020248,20142015,R,11/15/14,12,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020267,20142015,R,11/19/14,19,6,0,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020293,20142015,R,11/22/14,6,29,4,3,away win SO,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2014020296,20142015,R,11/23/14,8,6,2,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020312,20142015,R,11/25/14,5,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020336,20142015,R,11/29/14,52,6,1,2,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020361,20142015,R,12/2/14,6,24,2,3,home win REG,left,Honda Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2014020371,20142015,R,12/3/14,6,26,0,2,home win REG,right,STAPLES Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2014020386,20142015,R,12/5/14,6,28,4,7,home win REG,left,SAP Center at San Jose,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2014020400,20142015,R,12/7/14,6,53,5,2,away win REG,left,Gila River Arena,/api/v1/venues/null,America/Phoenix,-7,MST
+2014020421,20142015,R,12/12/14,16,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020435,20142015,R,12/13/14,9,6,3,2,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020459,20142015,R,12/17/14,6,18,2,3,home win SO,left,Bridgestone Arena,/api/v1/venues/null,America/Chicago,-5,CDT
+2014020465,20142015,R,12/18/14,6,30,3,2,away win OT,right,Xcel Energy Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2014020477,20142015,R,12/20/14,6,52,1,2,home win REG,right,MTS Centre,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2014020493,20142015,R,12/22/14,7,6,3,4,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020503,20142015,R,12/24/14,18,6,3,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020519,20142015,R,12/28/14,6,29,2,6,home win REG,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2014020529,20142015,R,12/30/14,17,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020547,20142015,R,1/1/15,10,6,4,3,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020566,20142015,R,1/3/15,9,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020576,20142015,R,1/4/15,6,12,1,2,home win SO,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2014020595,20142015,R,1/8/15,6,5,3,2,away win OT,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014020598,20142015,R,1/9/15,1,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020613,20142015,R,1/10/15,6,4,3,1,away win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014020630,20142015,R,1/14/15,14,6,3,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020644,20142015,R,1/16/15,3,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020660,20142015,R,1/18/15,29,6,3,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020690,20142015,R,1/21/15,6,25,3,1,away win REG,right,American Airlines Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2014020694,20142015,R,1/22/15,6,21,2,3,home win SO,right,Pepsi Center,/api/v1/venues/null,America/Denver,-6,MDT
+2014020711,20142015,R,1/30/15,6,2,5,2,away win REG,left,Nassau Coliseum,/api/v1/venues/null,America/New_York,-4,EDT
+2014020730,20142015,R,2/1/15,26,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020756,20142015,R,2/5/15,6,3,2,3,home win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020775,20142015,R,2/8/15,2,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020791,20142015,R,2/9/15,8,6,3,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020797,20142015,R,2/11/15,25,6,5,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020822,20142015,R,2/14/15,6,23,2,5,home win REG,right,Rogers Arena,/api/v1/venues/null,America/Vancouver,-7,PDT
+2014020843,20142015,R,2/17/15,6,20,3,4,home win OT,right,Scotiabank Saddledome,/api/v1/venues/null,America/Denver,-6,MDT
+2014020857,20142015,R,2/19/15,6,22,3,4,home win SO,left,Rexall Place,/api/v1/venues/null,America/Edmonton,-6,MDT
+2014020869,20142015,R,2/21/15,6,19,1,5,home win REG,left,Scottrade Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2014020885,20142015,R,2/22/15,6,16,6,2,away win REG,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2014020894,20142015,R,2/25/15,23,6,2,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020917,20142015,R,2/28/15,6,1,3,2,away win OT,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014020927,20142015,R,2/28/15,53,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020956,20142015,R,3/6/15,20,6,4,3,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020970,20142015,R,3/7/15,4,6,2,3,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020984,20142015,R,3/8/15,17,6,3,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014020995,20142015,R,3/10/15,6,9,3,1,away win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2014021002,20142015,R,3/12/15,14,6,2,3,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014021019,20142015,R,3/14/15,6,5,2,0,away win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014021035,20142015,R,3/15/15,6,15,0,2,home win REG,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014021041,20142015,R,3/17/15,7,6,2,1,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014021055,20142015,R,3/19/15,6,9,4,6,home win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2014021071,20142015,R,3/21/15,6,13,1,2,home win SO,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014021080,20142015,R,3/22/15,6,14,3,5,home win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2014021101,20142015,R,3/26/15,24,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014021116,20142015,R,3/28/15,3,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014021131,20142015,R,3/29/15,6,12,2,1,away win OT,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2014021142,20142015,R,3/31/15,13,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014021156,20142015,R,4/2/15,6,17,3,2,away win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2014021170,20142015,R,4/4/15,10,6,1,2,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2014021201,20142015,R,4/9/15,6,15,0,3,home win REG,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014021207,20142015,R,4/9/15,6,13,2,4,home win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2014021225,20142015,R,4/11/15,6,14,2,3,home win SO,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2015020005,20152016,R,10/8/15,52,6,6,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020018,20152016,R,10/10/15,8,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020032,20152016,R,10/12/15,14,6,6,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020048,20152016,R,10/15/15,6,21,6,2,away win REG,right,Pepsi Center,/api/v1/venues/null,America/Denver,-6,MDT
+2015020074,20152016,R,10/18/15,6,53,5,3,away win REG,left,Gila River Arena,/api/v1/venues/null,America/Phoenix,-7,MST
+2015020089,20152016,R,10/22/15,4,6,5,4,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020101,20152016,R,10/23/15,6,2,5,3,away win REG,left,Barclays Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020124,20152016,R,10/27/15,53,6,0,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020150,20152016,R,10/30/15,6,13,3,1,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020159,20152016,R,10/31/15,6,14,3,1,away win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2015020172,20152016,R,11/4/15,25,6,5,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020186,20152016,R,11/6/15,6,15,1,4,home win REG,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020202,20152016,R,11/8/15,6,8,2,4,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2015020213,20152016,R,11/8/15,6,2,2,1,away win REG,left,Barclays Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020230,20152016,R,11/13/15,21,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020247,20152016,R,11/15/15,17,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020267,20152016,R,11/18/15,28,6,5,4,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020278,20152016,R,11/20/15,30,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020293,20152016,R,11/22/15,10,6,0,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020312,20152016,R,11/24/15,6,10,4,3,away win SO,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2015020325,20152016,R,11/26/15,6,17,3,2,away win OT,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2015020330,20152016,R,11/27/15,3,6,3,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020371,20152016,R,12/3/15,6,22,2,3,home win SO,left,Rexall Place,/api/v1/venues/null,America/Edmonton,-6,MDT
+2015020385,20152016,R,12/5/15,6,20,4,5,home win OT,right,Scotiabank Saddledome,/api/v1/venues/null,America/Denver,-6,MDT
+2015020396,20152016,R,12/6/15,6,23,4,0,away win REG,right,Rogers Arena,/api/v1/venues/null,America/Vancouver,-7,PDT
+2015020405,20152016,R,12/8/15,18,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020417,20152016,R,12/10/15,6,8,3,1,away win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2015020435,20152016,R,12/12/15,13,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020448,20152016,R,12/15/15,22,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020465,20152016,R,12/17/15,5,6,0,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020477,20152016,R,12/19/15,6,5,6,2,away win REG,left,CONSOL Energy Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020494,20152016,R,12/20/15,1,6,1,2,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020507,20152016,R,12/23/15,19,6,2,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020517,20152016,R,12/27/15,7,6,6,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020526,20152016,R,12/27/15,6,9,1,3,home win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2015020541,20152016,R,12/30/15,9,6,3,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020565,20152016,R,1/1/16,8,6,5,1,away win REG,left,Gillette Stadium,/api/v1/venues/null,America/New_York,-4,EDT
+2015020588,20152016,R,1/6/16,15,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020608,20152016,R,1/9/16,6,1,4,1,away win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020617,20152016,R,1/10/16,6,9,1,2,home win OT,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2015020630,20152016,R,1/12/16,6,3,1,2,home win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020643,20152016,R,1/14/16,6,4,2,3,home win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020654,20152016,R,1/16/16,6,7,4,1,away win REG,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020662,20152016,R,1/17/16,10,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020686,20152016,R,1/20/16,6,8,4,1,away win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2015020693,20152016,R,1/22/16,23,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020711,20152016,R,1/24/16,29,6,2,3,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020727,20152016,R,1/26/16,6,4,3,2,away win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020731,20152016,R,1/27/16,24,6,6,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020744,20152016,R,2/3/16,10,6,4,3,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020759,20152016,R,2/5/16,6,7,3,2,away win SO,left,First Niagara Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020779,20152016,R,2/7/16,7,6,1,2,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020794,20152016,R,2/10/16,26,6,9,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020814,20152016,R,2/12/16,6,52,6,2,away win REG,right,MTS Centre,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2015020826,20152016,R,2/13/16,6,30,4,2,away win REG,right,Xcel Energy Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2015020837,20152016,R,2/14/16,6,17,5,6,home win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2015020850,20152016,R,2/17/16,6,29,2,1,away win OT,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2015020865,20152016,R,2/19/16,6,18,0,2,home win REG,left,Bridgestone Arena,/api/v1/venues/null,America/Chicago,-5,CDT
+2015020880,20152016,R,2/21/16,6,25,7,3,away win REG,right,American Airlines Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2015020889,20152016,R,2/23/16,29,6,6,4,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020903,20152016,R,2/25/16,5,6,1,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020918,20152016,R,2/27/16,6,12,4,1,away win REG,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2015020933,20152016,R,2/28/16,14,6,4,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020943,20152016,R,3/2/16,20,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020954,20152016,R,3/4/16,16,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020973,20152016,R,3/6/16,15,6,2,1,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015020988,20152016,R,3/8/16,6,13,5,4,away win OT,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015020998,20152016,R,3/9/16,6,14,1,0,away win OT,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2015021007,20152016,R,3/11/16,12,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015021018,20152016,R,3/12/16,2,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015021046,20152016,R,3/16/16,6,28,2,3,home win REG,left,SAP Center at San Jose,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2015021066,20152016,R,3/19/16,6,24,0,4,home win REG,left,Honda Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2015021077,20152016,R,3/20/16,6,26,1,2,home win REG,right,STAPLES Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2015021100,20152016,R,3/24/16,6,3,2,5,home win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015021101,20152016,R,3/24/16,13,6,4,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015021119,20152016,R,3/26/16,6,10,3,1,away win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2015021140,20152016,R,3/29/16,6,1,1,2,home win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2015021163,20152016,R,4/2/16,6,19,6,5,away win REG,left,Scottrade Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2015021178,20152016,R,4/3/16,6,16,4,6,home win REG,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2015021188,20152016,R,4/5/16,12,6,2,1,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015021202,20152016,R,4/7/16,17,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2015021216,20152016,R,4/9/16,9,6,6,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020008,20162017,R,10/13/16,6,29,6,3,away win REG,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020017,20162017,R,10/15/16,6,10,1,4,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2016020036,20162017,R,10/18/16,6,52,4,1,away win REG,right,MTS Centre,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2016020051,20162017,R,10/20/16,1,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020065,20162017,R,10/22/16,8,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020083,20162017,R,10/25/16,30,6,5,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020095,20162017,R,10/27/16,6,3,2,5,home win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020115,20162017,R,10/29/16,6,17,1,0,away win REG,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2016020136,20162017,R,11/1/16,6,13,2,1,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020151,20162017,R,11/3/16,6,14,4,3,away win SO,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020162,20162017,R,11/5/16,3,6,5,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020180,20162017,R,11/8/16,7,6,0,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020189,20162017,R,11/9/16,6,8,2,3,home win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2016020196,20162017,R,11/11/16,29,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020221,20162017,R,11/13/16,6,53,2,1,away win REG,left,Gila River Arena,/api/v1/venues/null,America/Phoenix,-7,MST
+2016020227,20162017,R,11/14/16,6,21,2,0,away win REG,right,Pepsi Center,/api/v1/venues/null,America/Denver,-6,MDT
+2016020250,20162017,R,11/18/16,6,30,0,1,home win REG,right,Xcel Energy Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2016020262,20162017,R,11/20/16,52,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020283,20162017,R,11/23/16,19,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020301,20162017,R,11/25/16,6,9,1,3,home win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2016020308,20162017,R,11/26/16,20,6,2,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020322,20162017,R,11/27/16,14,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020331,20162017,R,11/30/16,6,4,2,3,home win SO,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020345,20162017,R,12/2/16,12,6,1,2,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020359,20162017,R,12/3/16,6,7,2,1,away win REG,left,KeyBank Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020378,20162017,R,12/6/16,13,6,3,4,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020392,20162017,R,12/8/16,6,15,3,4,home win OT,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020395,20162017,R,12/9/16,21,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020413,20162017,R,12/11/16,10,6,4,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020430,20162017,R,12/13/16,6,8,2,1,away win OT,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2016020442,20162017,R,12/15/16,6,5,3,4,home win OT,left,PPG Paints Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020445,20162017,R,12/16/16,24,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020470,20162017,R,12/18/16,26,6,0,1,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020481,20162017,R,12/21/16,2,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020501,20162017,R,12/23/16,6,13,3,1,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020511,20162017,R,12/24/16,6,12,2,3,home win OT,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020520,20162017,R,12/28/16,6,29,3,4,home win REG,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020532,20162017,R,12/30/16,6,7,4,2,away win REG,left,KeyBank Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020548,20162017,R,12/31/16,7,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020563,20162017,R,1/3/17,6,1,0,3,home win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020578,20162017,R,1/6/17,22,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020596,20162017,R,1/8/17,6,13,4,0,away win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020604,20162017,R,1/8/17,6,12,3,4,home win OT,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020615,20162017,R,1/11/17,6,19,5,3,away win REG,left,Scottrade Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2016020627,20162017,R,1/13/17,6,18,1,2,home win REG,left,Bridgestone Arena,/api/v1/venues/null,America/Chicago,-5,CDT
+2016020640,20162017,R,1/14/17,4,6,3,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020656,20162017,R,1/16/17,2,6,4,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020674,20162017,R,1/19/17,6,17,5,6,home win SO,right,Joe Louis Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2016020685,20162017,R,1/21/17,16,6,1,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020702,20162017,R,1/22/17,6,5,1,5,home win REG,left,PPG Paints Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020714,20162017,R,1/25/17,17,6,3,4,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020728,20162017,R,1/27/17,5,6,3,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020747,20162017,R,2/1/17,6,14,4,3,away win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2016020755,20162017,R,2/2/17,6,15,3,5,home win REG,right,Verizon Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016020774,20162017,R,2/5/17,10,6,6,5,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020802,20162017,R,2/10/17,28,6,3,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020815,20162017,R,2/11/17,23,6,3,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020832,20162017,R,2/13/17,8,6,0,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020877,20162017,R,2/20/17,6,28,2,1,away win OT,left,SAP Center at San Jose,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2016020893,20162017,R,2/23/17,6,24,3,5,home win REG,left,Honda Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2016020899,20162017,R,2/24/17,6,26,4,1,away win REG,right,STAPLES Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2016020912,20162017,R,2/26/17,6,25,6,3,away win REG,right,American Airlines Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2016020922,20162017,R,3/1/17,53,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020936,20162017,R,3/3/17,3,6,2,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020952,20162017,R,3/5/17,1,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016020970,20162017,R,3/7/17,6,9,2,4,home win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2016020982,20162017,R,3/9/17,17,6,1,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021000,20162017,R,3/11/17,4,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021021,20162017,R,3/14/17,6,23,6,3,away win REG,right,Rogers Arena,/api/v1/venues/null,America/Vancouver,-7,PDT
+2016021034,20162017,R,3/16/17,6,20,5,2,away win REG,right,Scotiabank Saddledome,/api/v1/venues/null,America/Denver,-6,MDT
+2016021044,20162017,R,3/17/17,6,22,4,7,home win REG,left,Rogers Place,/api/v1/venues/null,America/Edmonton,-6,MDT
+2016021070,20162017,R,3/20/17,6,10,2,4,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2016021075,20162017,R,3/21/17,9,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021089,20162017,R,3/23/17,14,6,6,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021111,20162017,R,3/25/17,6,2,2,1,away win REG,left,Barclays Center,/api/v1/venues/null,America/New_York,-4,EDT
+2016021127,20162017,R,3/28/17,18,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021141,20162017,R,3/30/17,25,6,0,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021157,20162017,R,4/1/17,13,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021165,20162017,R,4/2/17,6,16,3,2,away win REG,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2016021179,20162017,R,4/4/17,14,6,0,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021194,20162017,R,4/6/17,9,6,2,1,away win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016021209,20162017,R,4/8/17,15,6,3,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016030121,20162017,P,4/12/17,6,9,2,1,away win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2016030122,20162017,P,4/15/17,6,9,3,4,home win OT,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2016030123,20162017,P,4/17/17,9,6,4,3,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016030124,20162017,P,4/19/17,9,6,1,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2016030125,20162017,P,4/21/17,6,9,3,2,away win OT,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2016030126,20162017,P,4/23/17,9,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020005,20172018,R,10/5/17,18,6,3,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020032,20172018,R,10/9/17,21,6,4,0,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020048,20172018,R,10/12/17,6,21,3,6,home win REG,right,Pepsi Center,/api/v1/venues/null,America/Denver,-6,MDT
+2017020072,20172018,R,10/15/17,6,53,6,2,away win REG,left,Gila River Arena,/api/v1/venues/null,America/Phoenix,-7,MST
+2017020077,20172018,R,10/15/17,6,54,1,3,home win REG,NA,T-Mobile Arena,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2017020095,20172018,R,10/19/17,23,6,3,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020112,20172018,R,10/21/17,7,6,5,4,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020138,20172018,R,10/26/17,28,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020156,20172018,R,10/28/17,26,6,2,1,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020172,20172018,R,10/30/17,6,29,3,4,home win SO,left,Nationwide Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017020186,20172018,R,11/2/17,54,6,1,2,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020201,20172018,R,11/4/17,15,6,3,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020217,20172018,R,11/7/17,30,6,3,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020233,20172018,R,11/9/17,6,3,2,4,home win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020243,20172018,R,11/11/17,6,10,2,3,home win OT,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2017020250,20172018,R,11/12/17,10,6,4,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020277,20172018,R,11/16/17,6,24,2,4,home win REG,left,Honda Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2017020288,20172018,R,11/17/17,6,26,2,1,away win REG,right,STAPLES Center,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2017020304,20172018,R,11/19/17,6,28,3,1,away win REG,left,SAP Center at San Jose,/api/v1/venues/null,America/Los_Angeles,-7,PDT
+2017020322,20172018,R,11/23/17,6,1,3,2,away win SO,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020334,20172018,R,11/24/17,5,6,3,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020361,20172018,R,11/26/17,22,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020377,20172018,R,11/30/17,14,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020396,20172018,R,12/2/17,6,4,3,0,away win REG,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020414,20172018,R,12/5/17,6,18,3,5,home win REG,left,Bridgestone Arena,/api/v1/venues/null,America/Chicago,-5,CDT
+2017020430,20172018,R,12/8/17,53,6,1,6,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020444,20172018,R,12/10/17,2,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020477,20172018,R,12/14/17,6,17,3,2,away win OT,right,Little Caesars Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2017020479,20172018,R,12/15/17,15,6,5,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020497,20172018,R,12/16/17,3,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020511,20172018,R,12/19/17,29,6,2,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020517,20172018,R,12/20/17,6,7,3,0,away win REG,left,KeyBank Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020529,20172018,R,12/22/17,52,6,1,2,home win SO,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020543,20172018,R,12/23/17,17,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020558,20172018,R,12/28/17,9,6,1,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020569,20172018,R,12/29/17,6,15,3,4,home win SO,right,Capital One Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017020587,20172018,R,12/31/17,6,9,5,0,away win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2017020603,20172018,R,1/3/18,6,2,5,1,away win REG,left,Barclays Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020616,20172018,R,4/8/18,13,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020636,20172018,R,1/7/18,12,6,1,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020650,20172018,R,1/8/18,6,5,5,6,home win OT,left,PPG Paints Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017020672,20172018,R,1/14/18,6,8,4,3,away win SO,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2017020683,20172018,R,1/15/18,25,6,3,2,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020693,20172018,R,1/18/18,8,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020696,20172018,R,1/19/18,6,2,5,2,away win REG,left,Barclays Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020712,20172018,R,1/21/18,6,8,4,1,away win REG,right,Centre Bell,/api/v1/venues/null,America/Montreal,-4,EDT
+2017020732,20172018,R,1/24/18,1,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020750,20172018,R,1/26/18,6,9,3,2,away win REG,left,Canadian Tire Centre,/api/v1/venues/null,America/New_York,-4,EDT
+2017020761,20172018,R,1/31/18,24,6,3,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020776,20172018,R,2/2/18,19,6,1,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020794,20172018,R,2/4/18,10,6,1,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020817,20172018,R,2/7/18,6,17,3,2,away win REG,right,Little Caesars Arena,/api/v1/venues/null,America/Detroit,-4,EDT
+2017020824,20172018,R,2/8/18,6,3,6,1,away win REG,right,Madison Square Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020843,20172018,R,2/11/18,7,6,4,2,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020857,20172018,R,2/12/18,6,1,5,3,away win REG,left,Prudential Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020864,20172018,R,2/14/18,20,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020904,20172018,R,2/18/18,6,23,1,6,home win REG,right,Rogers Arena,/api/v1/venues/null,America/Vancouver,-7,PDT
+2017020914,20172018,R,2/19/18,6,20,2,1,away win OT,right,Scotiabank Saddledome,/api/v1/venues/null,America/Denver,-6,MDT
+2017020925,20172018,R,2/21/18,6,22,3,2,away win REG,left,Rogers Place,/api/v1/venues/null,America/Edmonton,-6,MDT
+2017020948,20172018,R,2/25/18,6,10,3,4,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2017020958,20172018,R,2/25/18,6,7,1,4,home win REG,left,KeyBank Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017020969,20172018,R,2/28/18,12,6,3,4,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017020983,20172018,R,3/2/18,5,6,4,8,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021003,20172018,R,3/3/18,8,6,1,2,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021020,20172018,R,3/7/18,17,6,5,6,home win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021032,20172018,R,3/9/18,4,6,2,3,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021048,20172018,R,3/10/18,16,6,4,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021059,20172018,R,3/11/18,6,16,1,3,home win REG,right,United Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2017021071,20172018,R,3/13/18,6,12,6,4,away win REG,right,PNC Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017021087,20172018,R,3/15/18,6,13,0,3,home win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017021102,20172018,R,3/17/18,6,14,3,0,away win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017021116,20172018,R,3/19/18,29,6,5,4,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021134,20172018,R,3/22/18,6,19,1,2,home win OT,left,Scottrade Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2017021150,20172018,R,3/24/18,6,25,3,2,away win REG,right,American Airlines Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2017021166,20172018,R,3/25/18,6,30,2,1,away win OT,right,Xcel Energy Center,/api/v1/venues/null,America/Chicago,-5,CDT
+2017021182,20172018,R,3/28/18,6,52,4,5,home win SO,right,Bell MTS Place,/api/v1/venues/null,America/Winnipeg,-5,CDT
+2017021190,20172018,R,3/29/18,14,6,2,4,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021206,20172018,R,3/31/18,13,6,1,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017021218,20172018,R,4/1/18,6,4,3,4,home win OT,right,Wells Fargo Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017021233,20172018,R,4/3/18,6,14,0,4,home win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017021247,20172018,R,4/5/18,6,13,2,3,home win REG,right,BB&T Center,/api/v1/venues/null,America/New_York,-4,EDT
+2017021258,20172018,R,4/7/18,9,6,2,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030121,20172018,P,4/12/18,10,6,1,5,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030122,20172018,P,4/15/18,10,6,3,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030123,20172018,P,4/16/18,6,10,2,4,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2017030124,20172018,P,4/19/18,6,10,3,1,away win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2017030125,20172018,P,4/22/18,10,6,4,3,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030126,20172018,P,4/23/18,6,10,1,3,home win REG,right,Air Canada Centre,/api/v1/venues/null,America/Toronto,-4,EDT
+2017030127,20172018,P,4/25/18,10,6,4,7,home win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030211,20172018,P,4/28/18,6,14,6,2,away win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017030212,20172018,P,4/30/18,6,14,2,4,home win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT
+2017030213,20172018,P,5/2/18,14,6,4,1,away win REG,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030214,20172018,P,5/4/18,14,6,4,3,away win OT,left,TD Garden,/api/v1/venues/null,America/New_York,-4,EDT
+2017030215,20172018,P,5/6/18,6,14,1,3,home win REG,left,Amalie Arena,/api/v1/venues/null,America/New_York,-4,EDT

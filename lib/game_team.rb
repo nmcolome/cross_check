@@ -1,5 +1,5 @@
 require 'CSV'
-require 'pry'
+
 class GameTeam
   attr_reader :content
 
@@ -91,7 +91,11 @@ class GameTeam
 
   def best_fans
     teams = home_away_difference
-    teams.each { |k, v| v['dif'] = (v['home'] - v['away']).abs }
+    teams.each do |k, v|
+      home = v['home'].nil? ? 0 : v['home']
+      away = v['away'].nil? ? 0 : v['away']
+      v['dif'] = (home - away).abs
+    end
     teams.max_by { |key, value| value['dif'] }[0]
   end
 
@@ -118,7 +122,11 @@ class GameTeam
 
   def worst_fans
     teams = home_away_difference
-    teams.each { |k, v| v['dif'] = (v['away'] - v['home']) }
+    teams.each do |k, v|
+      home = v['home'].nil? ? 0 : v['home']
+      away = v['away'].nil? ? 0 : v['away']
+      v['dif'] = away - home
+    end
     result = teams.find_all { |k, v| v['dif'] > 0 }
     result.map { |e| e[0] }
   end
