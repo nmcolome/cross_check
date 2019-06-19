@@ -53,11 +53,12 @@ RSpec.describe GameTeam do
   end
 
   it '#best_fans' do
-    expect(@game_team.best_fans).to eq '6'
+    expect(@game_team.best_fans).to eq '54'
   end
 
   it '#worst_fans' do
-    expect(@game_team.worst_fans).to eq []
+    result = %w[7 8 2 9 21 25]
+    expect(@game_team.worst_fans).to eq result
   end
 
   it '#best_defense' do

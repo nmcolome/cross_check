@@ -110,11 +110,13 @@ RSpec.describe StatTracker do
   end
 
   it '#best_fans' do
-    expect(@stat_tracker.best_fans).to eq 'Bruins'
+    expect(@stat_tracker.best_fans).to eq 'Golden Knights'
   end
 
   it '#worst_fans' do
-    expect(@stat_tracker.worst_fans).to eq []
+    result = %w[Sabres Canadiens Islanders Senators Avalanche Stars]
+
+    expect(@stat_tracker.worst_fans).to eq result
   end
 
   it '#best_defense' do
