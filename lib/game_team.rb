@@ -334,4 +334,23 @@ class GameTeam
       teams[team_id] = goals / shots.to_f
     end
   end
+
+  def most_hits(game_ids)
+    result = get_hits(game_ids)
+    result.key(result.values.max)
+  end
+
+  def fewest_hits(game_ids)
+    result = get_hits(game_ids)
+    result.key(result.values.min)
+  end
+
+  def get_hits(game_ids)
+    games = get_games_data(game_ids)
+    teams = games.group_by { |r| r[:team_id] }
+    teams.each do |team_id, rows|
+      hits = rows.inject(0) { |sum, row| sum + row[:hits].to_i }
+      teams[team_id] = hits
+    end
+  end
 end

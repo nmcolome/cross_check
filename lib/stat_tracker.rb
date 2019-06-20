@@ -201,4 +201,16 @@ class StatTracker
     team_id = @game_team.least_accurate_team(game_ids)
     @team.find_name(team_id)
   end
+
+  def most_hits(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.most_hits(game_ids)
+    @team.find_name(team_id)
+  end
+
+  def fewest_hits(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.fewest_hits(game_ids)
+    @team.find_name(team_id)
+  end
 end
