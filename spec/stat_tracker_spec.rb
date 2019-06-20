@@ -347,4 +347,8 @@ RSpec.describe StatTracker do
   it '#fewest_hits' do
     expect(@stat_tracker.fewest_hits('20132014')).to eq 'Wild'
   end
+
+  it '#power_play_goal_percentage' do
+    expect(@stat_tracker.power_play_goal_percentage('20132014')).to eq 0.23
+  end
 end

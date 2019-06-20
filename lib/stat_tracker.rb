@@ -213,4 +213,9 @@ class StatTracker
     team_id = @game_team.fewest_hits(game_ids)
     @team.find_name(team_id)
   end
+
+  def power_play_goal_percentage(season_id)
+    game_ids = @game.get_season_games(season_id)
+    @game_team.power_play_goal_percentage(game_ids)
+  end
 end

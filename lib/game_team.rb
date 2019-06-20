@@ -353,4 +353,11 @@ class GameTeam
       teams[team_id] = hits
     end
   end
+
+  def power_play_goal_percentage(game_ids)
+    games = get_games_data(game_ids)
+    ppgoals = games.inject(0) { |sum, row| sum + row[:powerplaygoals].to_i }
+    goals = games.inject(0) { |sum, row| sum + row[:goals].to_i }
+    (ppgoals / goals.to_f).round(2)
+  end
 end
