@@ -189,4 +189,16 @@ class StatTracker
     game_ids = @game.get_season_games(season_id)
     @game_team.worst_coach(game_ids)
   end
+
+  def most_accurate_team(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.most_accurate_team(game_ids)
+    @team.find_name(team_id)
+  end
+
+  def least_accurate_team(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.least_accurate_team(game_ids)
+    @team.find_name(team_id)
+  end
 end

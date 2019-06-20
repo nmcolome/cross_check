@@ -290,7 +290,7 @@ class GameTeam
     result.key(result.values.min)
   end
 
-  def get_games_by_coach(game_ids)
+  def get_games_data(game_ids)
     games = game_ids.map do |game_id|
       @content.find_all { |row| row[:game_id] == game_id }
     end
@@ -306,8 +306,32 @@ class GameTeam
   end
 
   def win_percent_by_coach(game_ids)
-    games = get_games_by_coach(game_ids)
+    games = get_games_data(game_ids)
     coaches = games.group_by { |r| r[:head_coach] }
     wins_percent_by_coach_calc(coaches)
+  end
+
+  def most_accurate_team(game_ids)
+    result = shot_to_goals_ratio(game_ids)
+    result.key(result.values.max)
+  end
+
+  def least_accurate_team(game_ids)
+    result = shot_to_goals_ratio(game_ids)
+    result.key(result.values.min)
+  end
+
+  def shot_to_goals_ratio(game_ids)
+    games = get_games_data(game_ids)
+    teams = games.group_by { |r| r[:team_id] }
+    shot_to_goals_calc(teams)
+  end
+
+  def shot_to_goals_calc(teams)
+    teams.each do |team_id, rows|
+      goals = rows.inject(0) { |sum, row| sum + row[:goals].to_i }
+      shots = rows.inject(0) { |sum, row| sum + row[:shots].to_i }
+      teams[team_id] = goals / shots.to_f
+    end
   end
 end

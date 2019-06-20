@@ -331,4 +331,12 @@ RSpec.describe StatTracker do
   it '#worst_coach' do
     expect(@stat_tracker.worst_coach('20132014')).to eq 'Jon Cooper'
   end
+
+  it '#most_accurate_team' do
+    expect(@stat_tracker.most_accurate_team('20132014')).to eq 'Ducks'
+  end
+
+  it '#least_accurate_team' do
+    expect(@stat_tracker.least_accurate_team('20132014')).to eq 'Sharks'
+  end
 end
