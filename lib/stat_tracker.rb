@@ -167,4 +167,55 @@ class StatTracker
   def seasonal_summary(team_id)
     @game.seasonal_summary(team_id)
   end
+
+  def biggest_bust(season_id)
+    games = @game.by_season_type(season_id)
+    team_id = @game_team.biggest_bust(games)
+    @team.find_name(team_id)
+  end
+
+  def biggest_surprise(season_id)
+    games = @game.by_season_type(season_id)
+    team_id = @game_team.biggest_surprise(games)
+    @team.find_name(team_id)
+  end
+
+  def winningest_coach(season_id)
+    game_ids = @game.get_season_games(season_id)
+    @game_team.winningest_coach(game_ids)
+  end
+
+  def worst_coach(season_id)
+    game_ids = @game.get_season_games(season_id)
+    @game_team.worst_coach(game_ids)
+  end
+
+  def most_accurate_team(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.most_accurate_team(game_ids)
+    @team.find_name(team_id)
+  end
+
+  def least_accurate_team(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.least_accurate_team(game_ids)
+    @team.find_name(team_id)
+  end
+
+  def most_hits(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.most_hits(game_ids)
+    @team.find_name(team_id)
+  end
+
+  def fewest_hits(season_id)
+    game_ids = @game.get_season_games(season_id)
+    team_id = @game_team.fewest_hits(game_ids)
+    @team.find_name(team_id)
+  end
+
+  def power_play_goal_percentage(season_id)
+    game_ids = @game.get_season_games(season_id)
+    @game_team.power_play_goal_percentage(game_ids)
+  end
 end

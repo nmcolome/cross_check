@@ -315,4 +315,40 @@ RSpec.describe StatTracker do
 
     expect(@stat_tracker.seasonal_summary('6')).to eq result
   end
+
+  it '#biggest_bust' do
+    expect(@stat_tracker.biggest_bust('20132014')).to eq 'Red Wings'
+  end
+
+  it '#biggest_surprise' do
+    expect(@stat_tracker.biggest_surprise('20132014')).to eq 'Bruins'
+  end
+
+  it '#winningest_coach' do
+    expect(@stat_tracker.winningest_coach('20132014')).to eq 'Ken Hitchcock'
+  end
+
+  it '#worst_coach' do
+    expect(@stat_tracker.worst_coach('20132014')).to eq 'Jon Cooper'
+  end
+
+  it '#most_accurate_team' do
+    expect(@stat_tracker.most_accurate_team('20132014')).to eq 'Ducks'
+  end
+
+  it '#least_accurate_team' do
+    expect(@stat_tracker.least_accurate_team('20132014')).to eq 'Sharks'
+  end
+
+  it '#most_hits' do
+    expect(@stat_tracker.most_hits('20132014')).to eq 'Bruins'
+  end
+
+  it '#fewest_hits' do
+    expect(@stat_tracker.fewest_hits('20132014')).to eq 'Wild'
+  end
+
+  it '#power_play_goal_percentage' do
+    expect(@stat_tracker.power_play_goal_percentage('20132014')).to eq 0.23
+  end
 end

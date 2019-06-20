@@ -222,4 +222,11 @@ RSpec.describe Game do
 
     expect(@game.seasonal_summary('6')).to eq result
   end
+
+  it '#by_season_type' do
+    result = @game.by_season_type('20132014')
+
+    expect(result['P'].count).to eq 12
+    expect(result['R'].count).to eq 82
+  end
 end

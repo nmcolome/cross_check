@@ -237,4 +237,127 @@ class GameTeam
       (pair[0][:goals].to_i - pair[1][:goals].to_i).abs
     end
   end
+
+  def biggest_bust(games)
+    result = difference_between_rp_seasons(games)
+    result.key(result.values.max)
+  end
+
+  def biggest_surprise(games)
+    result = difference_between_rp_seasons(games)
+    result.key(result.values.min)
+  end
+
+  def get_data_by_game_type(games)
+    games.each do |type, game_ids|
+      games[type] = []
+      game_ids.each do |game_id|
+        rows = @content.find_all { |row| row[:game_id] == game_id }
+        games[type] << rows
+      end
+      games[type].flatten!
+    end
+  end
+
+  def wins_percent_by_type_and_team(games)
+    games.each do |type, teams|
+      teams.each do |team_id, rows|
+        wins = rows.count { |row| row[:won] == 'TRUE' }
+        count = rows.count.to_f
+        teams[team_id] = (wins / count).round(2)
+      end
+    end
+  end
+
+  def difference_between_rp_seasons(games)
+    get_data_by_game_type(games)
+    games.each { |k, v| games[k] = v.group_by { |r| r[:team_id] } }
+    wins_percent_by_type_and_team(games)
+    result = {}
+    games['P'].each do |team_id, win_percent|
+      result[team_id] = games['R'][team_id] - win_percent
+    end
+    result
+  end
+
+  def winningest_coach(game_ids)
+    result = win_percent_by_coach(game_ids)
+    result.key(result.values.max)
+  end
+
+  def worst_coach(game_ids)
+    result = win_percent_by_coach(game_ids)
+    result.key(result.values.min)
+  end
+
+  def get_games_data(game_ids)
+    games = game_ids.map do |game_id|
+      @content.find_all { |row| row[:game_id] == game_id }
+    end
+    games.flatten!
+  end
+
+  def wins_percent_by_coach_calc(coaches)
+    coaches.each do |coach, rows|
+      wins = rows.count { |row| row[:won] == 'TRUE' }
+      count = rows.count.to_f
+      coaches[coach] = (wins / count).round(2)
+    end
+  end
+
+  def win_percent_by_coach(game_ids)
+    games = get_games_data(game_ids)
+    coaches = games.group_by { |r| r[:head_coach] }
+    wins_percent_by_coach_calc(coaches)
+  end
+
+  def most_accurate_team(game_ids)
+    result = shot_to_goals_ratio(game_ids)
+    result.key(result.values.max)
+  end
+
+  def least_accurate_team(game_ids)
+    result = shot_to_goals_ratio(game_ids)
+    result.key(result.values.min)
+  end
+
+  def shot_to_goals_ratio(game_ids)
+    games = get_games_data(game_ids)
+    teams = games.group_by { |r| r[:team_id] }
+    shot_to_goals_calc(teams)
+  end
+
+  def shot_to_goals_calc(teams)
+    teams.each do |team_id, rows|
+      goals = rows.inject(0) { |sum, row| sum + row[:goals].to_i }
+      shots = rows.inject(0) { |sum, row| sum + row[:shots].to_i }
+      teams[team_id] = goals / shots.to_f
+    end
+  end
+
+  def most_hits(game_ids)
+    result = get_hits(game_ids)
+    result.key(result.values.max)
+  end
+
+  def fewest_hits(game_ids)
+    result = get_hits(game_ids)
+    result.key(result.values.min)
+  end
+
+  def get_hits(game_ids)
+    games = get_games_data(game_ids)
+    teams = games.group_by { |r| r[:team_id] }
+    teams.each do |team_id, rows|
+      hits = rows.inject(0) { |sum, row| sum + row[:hits].to_i }
+      teams[team_id] = hits
+    end
+  end
+
+  def power_play_goal_percentage(game_ids)
+    games = get_games_data(game_ids)
+    ppgoals = games.inject(0) { |sum, row| sum + row[:powerplaygoals].to_i }
+    goals = games.inject(0) { |sum, row| sum + row[:goals].to_i }
+    (ppgoals / goals.to_f).round(2)
+  end
 end
