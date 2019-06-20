@@ -339,4 +339,12 @@ RSpec.describe StatTracker do
   it '#least_accurate_team' do
     expect(@stat_tracker.least_accurate_team('20132014')).to eq 'Sharks'
   end
+
+  it '#most_hits' do
+    expect(@stat_tracker.most_hits('20132014')).to eq 'Bruins'
+  end
+
+  it '#fewest_hits' do
+    expect(@stat_tracker.fewest_hits('20132014')).to eq 'Wild'
+  end
 end

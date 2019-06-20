@@ -143,4 +143,12 @@ RSpec.describe GameTeam do
 
     expect(@game_team.least_accurate_team(game_ids)).to eq '28'
   end
+
+  it '#most_hits' do
+    expect(@game_team.most_hits('20132014')).to eq '6'
+  end
+
+  it '#fewest_hits' do
+    expect(@game_team.fewest_hits('20132014')).to eq '30'
+  end
 end
