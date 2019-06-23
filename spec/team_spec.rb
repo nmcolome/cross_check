@@ -43,4 +43,11 @@ RSpec.describe Team do
 
     expect(@team.team_info('1')).to eq result
   end
+
+  it '#teams' do
+  expect(@team.teams).to be_an_instance_of Array
+  expect(@team.teams.count).to eq 33
+  expect(@team.teams[0]).to eq ['Anaheim', '24']
+  expect(@team.teams[32]).to eq ['Winnipeg', '52']
+  end
 end
