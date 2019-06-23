@@ -1,109 +1,101 @@
 <div class="card">
-  <h1>Game Statistics</h1>
-  <table>
-    <tr>
-      <th>highest total score</th>
-      <td><%= @stat_tracker.highest_total_score %></td>
-    </tr>
-    <tr>
-      <th>lowest total score</th>
-      <td><%= @stat_tracker.lowest_total_score %></td>
-    </tr>
-    <tr>
-      <th>biggest blowout</th>
-      <td><%= @stat_tracker.biggest_blowout %></td>
-    </tr>
-    <tr>
-      <th>percentage home wins</th>
-      <td><%= @stat_tracker.percentage_home_wins %></td>
-    </tr>
-    <tr>
-      <th>percentage visitor wins</th>
-      <td><%= @stat_tracker.percentage_visitor_wins %></td>
-    </tr>
-    <tr>
-      <th>count of games by season</th>
-      <td>
-        <table>
-        <% @stat_tracker.count_of_games_by_season.each do |key, value| %>
-          <tr>
-          <td><%= key %></td>
-          <td><%= value %></td>
-          <tr>
-        <% end %>
-        </table>
-      </td>
-    </tr>
-    <tr>
-      <th>average goals per game</th>
-      <td><%= @stat_tracker.average_goals_per_game %></td>
-    </tr>
-    <tr>
-      <th>average goals by season</th>
-      <td>
-        <table>
-        <% @stat_tracker.average_goals_by_season.each do |key, value| %>
-          <tr>
-          <td><%= key %></td>
-          <td><%= value %></td>
-          <tr>
-        <% end %>
-        </table>
-      </td>
-    </tr>
-  </table>
+  <h1 class="title">Game Statistics</h1>
+  <div class="stats-container">
+    <table class="stats-table">
+      <tr>
+        <th>highest total score</th>
+        <td><%= @stat_tracker.highest_total_score %></td>
+      </tr>
+      <tr>
+        <th>lowest total score</th>
+        <td><%= @stat_tracker.lowest_total_score %></td>
+      </tr>
+      <tr>
+        <th>biggest blowout</th>
+        <td><%= @stat_tracker.biggest_blowout %></td>
+      </tr>
+      <tr>
+        <th>average goals per game</th>
+        <td><%= @stat_tracker.average_goals_per_game %></td>
+      </tr>
+      <tr>
+        <th>percentage home wins</th>
+        <td><%= @stat_tracker.percentage_home_wins %></td>
+      </tr>
+      <tr>
+        <th>percentage visitor wins</th>
+        <td><%= @stat_tracker.percentage_visitor_wins %></td>
+      </tr>
+    </table>
+    <table class="stats-table">
+      <tr>
+        <th>season</th>
+        <th>game count</th>
+        <th>average goals</th>
+      </tr>
+      <% @stat_tracker.count_of_games_by_season.sort.each do |pair| %>
+        <tr>
+          <td><%= pair[0] %></td>
+          <td><%= pair[1] %></td>
+          <td><%= @stat_tracker.average_goals_by_season[pair[0]] %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
 </div>
 
 <div class="card">
-  <h1>League and Season Statistics</h1>
-  <table>
-    <tr>
-      <th>count of teams</th>
-      <td><%= @stat_tracker.count_of_teams %></td>
-    </tr>
-    <tr>
-      <th>best offense</th>
-      <td><%= @stat_tracker.best_offense %></td>
-    </tr>
-    <tr>
-      <th>worst offense</th>
-      <td><%= @stat_tracker.worst_offense %></td>
-    </tr>
-    <tr>
-      <th>best defense</th>
-      <td><%= @stat_tracker.best_defense %></td>
-    </tr>
-    <tr>
-      <th>worst defense</th>
-      <td><%= @stat_tracker.worst_defense %></td>
-    </tr>
-    <tr>
-      <th>highest scoring visitor</th>
-      <td><%= @stat_tracker.highest_scoring_visitor %></td>
-    </tr>
-    <tr>
-      <th>highest scoring home team</th>
-      <td><%= @stat_tracker.highest_scoring_home_team %></td>
-    </tr>
-    <tr>
-      <th>lowest scoring visitor</th>
-      <td><%= @stat_tracker.lowest_scoring_visitor %></td>
-    </tr>
-    <tr>
-      <th>lowest scoring home_team</th>
-      <td><%= @stat_tracker.lowest_scoring_home_team %></td>
-    </tr>
-    <tr>
-      <th>winningest team</th>
-      <td><%= @stat_tracker.winningest_team %></td>
-    </tr>
-    <tr>
-      <th>best fans</th>
-      <td><%= @stat_tracker.best_fans %></td>
-    </tr>
-    <tr>
-      <th>worst fans</th>
-      <td><%= @stat_tracker.worst_fans %></td>
-    </tr>
-  </table>
+  <h1 class="title">League and Season Statistics</h1>
+  <div class="stats-container">
+    <table class="stats-table">
+      <tr>
+        <th>count of teams</th>
+        <td><%= @stat_tracker.count_of_teams %></td>
+      </tr>
+      <tr>
+        <th>best offense</th>
+        <td><%= @stat_tracker.best_offense %></td>
+      </tr>
+      <tr>
+        <th>worst offense</th>
+        <td><%= @stat_tracker.worst_offense %></td>
+      </tr>
+      <tr>
+        <th>best defense</th>
+        <td><%= @stat_tracker.best_defense %></td>
+      </tr>
+      <tr>
+        <th>worst defense</th>
+        <td><%= @stat_tracker.worst_defense %></td>
+      </tr>
+      <tr>
+        <th>highest scoring visitor</th>
+        <td><%= @stat_tracker.highest_scoring_visitor %></td>
+      </tr>
+      <tr>
+        <th>highest scoring home team</th>
+        <td><%= @stat_tracker.highest_scoring_home_team %></td>
+      </tr>
+      <tr>
+        <th>lowest scoring visitor</th>
+        <td><%= @stat_tracker.lowest_scoring_visitor %></td>
+      </tr>
+      <tr>
+        <th>lowest scoring home_team</th>
+        <td><%= @stat_tracker.lowest_scoring_home_team %></td>
+      </tr>
+      <tr>
+        <th>winningest team</th>
+        <td><%= @stat_tracker.winningest_team %></td>
+      </tr>
+      <tr>
+        <th>best fans</th>
+        <td><%= @stat_tracker.best_fans %></td>
+      </tr>
+      <tr>
+        <th>worst fans</th>
+        <td><%= @stat_tracker.worst_fans.join(", ") %></td>
+      </tr>
+    </table>
+  </div>
 </div>

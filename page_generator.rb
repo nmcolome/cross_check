@@ -5,7 +5,7 @@ class PageGenerator
   def initialize
     @stat_tracker = Runner.new.start
     @layout = File.read('./site/layout.erb')
-    @template = File.read('./site/index.erb')
+    @template = File.read('./site/index_template.erb')
   end
 
   def render
