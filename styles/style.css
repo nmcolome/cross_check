@@ -1,0 +1,15 @@
+body {
+  background-color: #D2D2D2;
+}
+
+.card {
+  background-color: #FFFFFF;
+}
+
+table, th, td {
+  border: 1px solid black;
+}
+
+th {
+  text-align: left;
+}
