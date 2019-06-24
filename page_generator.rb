@@ -4,6 +4,7 @@ require './lib/runner'
 class PageGenerator
   def initialize
     @stat_tracker = Runner.new.start
+    @teams = @stat_tracker.teams
     @layout = File.read('./site/layout.erb')
     @template = File.read('./site/index_template.erb')
   end

@@ -1,0 +1,76 @@
+<div class="card">
+  <h1 class="title">Team Statistics</h1>
+
+  <% team_id = '6' %>
+  <% team_name = @teams.to_h.key(team_id) %>
+
+  <h3> Team: <%= team_name %></h3>
+  <table class="stats-table">
+    <tr>
+      <th>team info</th>
+      <td><%= @stat_tracker.team_info(team_id) %></td>
+    </tr>
+    <tr>
+      <th>best season</th>
+      <td><%= @stat_tracker.best_season(team_id) %></td>
+    </tr>
+    <tr>
+      <th>worst season</th>
+      <td><%= @stat_tracker.worst_season(team_id) %></td>
+    </tr>
+    <tr>
+      <th>average_win_percentage</th>
+      <td><%= @stat_tracker.average_win_percentage(team_id) %></td>
+    </tr>
+    <tr>
+      <th>most_goals_scored</th>
+      <td><%= @stat_tracker.most_goals_scored(team_id) %></td>
+    </tr>
+    <tr>
+      <th>fewest_goals_scored</th>
+      <td><%= @stat_tracker.fewest_goals_scored(team_id) %></td>
+    </tr>
+    <tr>
+      <th>favorite_opponent</th>
+      <td><%= @stat_tracker.favorite_opponent(team_id) %></td>
+    </tr>
+    <tr>
+      <th>rival</th>
+      <td><%= @stat_tracker.rival(team_id) %></td>
+    </tr>
+    <tr>
+      <th>biggest_team_blowout</th>
+      <td><%= @stat_tracker.biggest_team_blowout(team_id) %></td>
+    </tr>
+    <tr>
+      <th>worst_loss</th>
+      <td><%= @stat_tracker.worst_loss(team_id) %></td>
+    </tr>
+    <tr>
+      <th>head_to_head</th>
+      <td><%= @stat_tracker.head_to_head(team_id) %></td>
+    </tr>
+    <tr>
+      <th>seasonal_summary</th>
+      <td><%= @stat_tracker.seasonal_summary(team_id) %></td>
+    </tr>
+  </table>
+</div>
+
+<!--
+<form method="get">
+  Team:
+  <select class="team-selection">
+    <% @teams.each do |name, id| %>
+      <option value="<%= id %>"><%= name %></option>
+    <% end %>
+  </select>
+</form>
+-->
+<!--
+<script>
+  document.querySelector(".team-selection").addEventListener("change", function(event) {
+    event.target.value;
+  })
+</script>
+-->
