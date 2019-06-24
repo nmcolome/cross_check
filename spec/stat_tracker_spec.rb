@@ -29,7 +29,7 @@ RSpec.describe StatTracker do
 
   it '#teams' do
     expect(@stat_tracker.teams).to be_an_instance_of Array
-    expect(@stat_tracker.teams.first).to eq ['Anaheim', '24']
+    expect(@stat_tracker.teams.first).to eq ['Anaheim Ducks', '24']
   end
 
   it '#highest_total_score' do

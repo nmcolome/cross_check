@@ -35,6 +35,6 @@ class Team
   end
 
   def teams
-    @content.map { |r| [r[:shortname], r[:team_id]] }.sort
+    @content.map { |r| ["#{r[:shortname]} #{r[:teamname]}", r[:team_id]] }.sort
   end
 end
