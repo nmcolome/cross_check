@@ -23,6 +23,10 @@ class StatTracker
     stat_tracker = StatTracker.new(game, team, game_team)
   end
 
+  def teams
+    @team.teams
+  end
+
   def highest_total_score
     @game.highest_total_score
   end

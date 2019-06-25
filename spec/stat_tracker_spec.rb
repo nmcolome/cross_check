@@ -27,6 +27,11 @@ RSpec.describe StatTracker do
     expect(@stat_tracker.game_team.content.count).to eq 1020
   end
 
+  it '#teams' do
+    expect(@stat_tracker.teams).to be_an_instance_of Array
+    expect(@stat_tracker.teams.first).to eq ['Anaheim Ducks', '24']
+  end
+
   it '#highest_total_score' do
     expect(@stat_tracker.highest_total_score).to eq 12
   end

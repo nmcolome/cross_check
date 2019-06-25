@@ -1,0 +1,64 @@
+/* Normalizing  */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ECECEC;
+  font-family: Roboto, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+header,
+nav {
+  padding: 10px 50px;
+  background-color: #D2D2D2;
+}
+
+nav a {
+  text-decoration: none;
+  padding: 0 30px 0 0;
+}
+
+.card {
+  background-color: #FFFFFF;
+  text-transform: capitalize;
+  margin: 30px;
+  padding: 30px;
+  border-radius: 5px;
+  box-shadow: 0px 10px 18px rgba(0, 0, 0, 0.2);
+  width: 90%;
+}
+
+table,
+th,
+td {
+  border: 1px solid #D6D6D6;
+}
+
+th {
+  text-align: left;
+}
+
+.stats-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
